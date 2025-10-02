@@ -1,78 +1,94 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>منصة الجزائر التعليمية</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <title>الجزائر التعليمية</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header <!-- 🔹 Navbar -->
-<nav class="navbar">
-  <div class="logo">📚 الجزائر التعليمية</div>
-  <button class="lang-btn">EN 🌐</button>
-  <div class="menu-toggle">☰</div>
-  <ul class="nav-links">
-    <li><a href="#home">الرئيسية</a></li>
-    <li><a href="#library">المكتبة</a></li>
-    <li><a href="#courses">الدورات</a></li>
-    <li><a href="#live">البث</a></li>
-    <li><a href="#community">المجتمع</a></li>
-    <li><a href="#contact">تواصل</a></li>
-  </ul>
-</nav>
 
-<!-- 🔹 Overlay -->
-<div class="overlay"></div>
-    
-    <button class="lang-btn" onclick="toggleLang()">🌐 EN</button>
-  </header>
+  <!-- 🔹 Navbar -->
+  <nav class="navbar">
+    <div class="logo">📚 الجزائر التعليمية</div>
+    <button class="lang-btn">EN 🌐</button>
+    <div class="menu-toggle">☰</div>
+    <ul class="nav-links">
+      <li><a href="#home">الرئيسية</a></li>
+      <li><a href="#library">المكتبة</a></li>
+      <li><a href="#courses">الدورات</a></li>
+      <li><a href="#live">البث</a></li>
+      <li><a href="#community">المجتمع</a></li>
+      <li><a href="#contact">تواصل</a></li>
+    </ul>
+  </nav>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>مرحباً بك في منصتك التعليمية</h1>
-      <p>مكتبة مجانية + دورات تفاعلية + مجتمع تعليمي لطلاب الجزائر</p>
-      <a href="pages/library.html" class="btn">📖 تصفح المكتبة</a>
-    </div>
+  <!-- 🔹 Overlay -->
+  <div class="overlay"></div>
+
+  <!-- 🔹 Hero Section -->
+  <section class="hero" id="home">
+    <h1>مرحباً بك في منصتك التعليمية</h1>
+    <p>مكتبة مجانية + دورات تفاعلية + مجتمع تعليمي لطلاب الجزائر</p>
+    <a href="#library" class="btn">📖 تصفح المكتبة</a>
   </section>
 
-  <section class="features">
-    <div class="feature-card">
-      <h3>📚 مكتبة شاملة</h3>
-      <p>كتب ومقالات في جميع المجالات التعليمية.</p>
-    </div>
-    <div class="feature-card">
-      <h3>🎥 بث مباشر</h3>
-      <p>محاضرات مباشرة مع الأساتذة.</p>
-    </div>
-    <div class="feature-card">
-      <h3>👥 مجتمع</h3>
-      <p>شارك الأسئلة والأفكار مع زملائك.</p>
-    </div>
+  <!-- 🔹 مكتبة -->
+  <section id="library">
+    <h2 class="page-title">📚 المكتبة</h2>
+    <p class="page-subtitle">محتوى مجاني شامل لجميع المستويات</p>
+    <div class="card">هنا تعرض الكتب والمراجع</div>
   </section>
 
+  <!-- 🔹 الدورات -->
+  <section id="courses">
+    <h2 class="page-title">🎓 الدورات</h2>
+    <p class="page-subtitle">دورات تفاعلية مجانية</p>
+    <div class="card">مثال على دورة</div>
+  </section>
+
+  <!-- 🔹 البث -->
+  <section id="live">
+    <h2 class="page-title">🔴 البث المباشر</h2>
+    <p class="page-subtitle">متابعة مباشرة مع الأساتذة</p>
+    <div class="card">رابط بث أو فيديو مدمج</div>
+  </section>
+
+  <!-- 🔹 المجتمع -->
+  <section id="community">
+    <h2 class="page-title">👥 المجتمع</h2>
+    <p class="page-subtitle">تبادل المعرفة بين الطلاب</p>
+    <div class="card">منشور من طالب</div>
+  </section>
+
+  <!-- 🔹 تواصل -->
+  <section id="contact">
+    <h2 class="page-title">📩 تواصل معنا</h2>
+    <p class="page-subtitle">نسعد برسائلكم واقتراحاتكم</p>
+    <div class="card">نموذج تواصل هنا</div>
+  </section>
+
+  <!-- 🔹 Footer -->
   <footer>
-    <p>© 2025 منصة الجزائر التعليمية | جميع الحقوق محفوظة</p>
+    <p>© 2025 الجزائر التعليمية - جميع الحقوق محفوظة</p>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <!-- 🔹 JavaScript -->
   <script>
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
-  const overlay = document.querySelector(".overlay");
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    const overlay = document.querySelector(".overlay");
 
-  // عند الضغط على زر ☰
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    overlay.classList.toggle("active");
-  });
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      overlay.classList.toggle("active");
+    });
 
-  // عند الضغط على الخلفية السوداء
-  overlay.addEventListener("click", () => {
-    navLinks.classList.remove("active");
-    overlay.classList.remove("active");
-  });
-</script>
+    overlay.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+  </script>
 
 </body>
 </html>
