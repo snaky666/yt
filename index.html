@@ -2,27 +2,53 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>منصة الجزائر التعليمية</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header>
-    <h1>📚 منصة الجزائر التعليمية</h1>
+  <header class="navbar">
+    <div class="logo">📚 الجزائر التعليمية</div>
     <nav>
-      <a href="index.html">الرئيسية</a> |
-      <a href="pages/courses.html">الدورات</a> |
-      <a href="pages/library.html">المكتبة</a> |
-      <a href="pages/live.html">بث مباشر</a> |
-      <a href="pages/community.html">المجتمع</a> |
-      <a href="pages/contact.html">تواصل</a>
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="pages/courses.html">الدورات</a></li>
+        <li><a href="pages/library.html">المكتبة</a></li>
+        <li><a href="pages/live.html">البث</a></li>
+        <li><a href="pages/community.html">المجتمع</a></li>
+        <li><a href="pages/contact.html">تواصل</a></li>
+      </ul>
     </nav>
+    <button class="lang-btn" onclick="toggleLang()">🌐 EN</button>
   </header>
-  <main>
-    <h2>مرحبا بك 👋</h2>
-    <p>هذه نسخة تجريبية لموقع تعليمي شامل لطلاب الجزائر.</p>
-  </main>
-  <footer>© 2025 جميع الحقوق محفوظة</footer>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>مرحباً بك في منصتك التعليمية</h1>
+      <p>مكتبة مجانية + دورات تفاعلية + مجتمع تعليمي لطلاب الجزائر</p>
+      <a href="pages/library.html" class="btn">📖 تصفح المكتبة</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature-card">
+      <h3>📚 مكتبة شاملة</h3>
+      <p>كتب ومقالات في جميع المجالات التعليمية.</p>
+    </div>
+    <div class="feature-card">
+      <h3>🎥 بث مباشر</h3>
+      <p>محاضرات مباشرة مع الأساتذة.</p>
+    </div>
+    <div class="feature-card">
+      <h3>👥 مجتمع</h3>
+      <p>شارك الأسئلة والأفكار مع زملائك.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 منصة الجزائر التعليمية | جميع الحقوق محفوظة</p>
+  </footer>
+
   <script src="assets/js/main.js"></script>
 </body>
 </html>
