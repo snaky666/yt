@@ -1,105 +1,72 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>موقع تعليمي جزائري عالمي</title>
+  <title>الجزائر التعليمية</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <!-- ✅ Navbar -->
+  <!-- 🔹 Navbar -->
   <nav class="navbar">
-    <div class="logo">EduDz</div>
-    <div class="menu-toggle">&#9776;</div>
+    <div class="logo">📚 الجزائر التعليمية</div>
+    <button class="lang-btn">EN 🌐</button>
+    <div class="menu-toggle">☰</div>
     <ul class="nav-links">
-      <li><a href="#hero">الرئيسية</a></li>
-      <li><a href="#courses">الدروس</a></li>
-      <li><a href="#library">المكتبة</a></li>
-      <li><a href="#blog">المقالات</a></li>
-      <li><a href="#about">عن الموقع</a></li>
-      <li><a href="#contact">اتصل بنا</a></li>
+      <li><a href="#home">🏠 الرئيسية</a></li>
+      <li><a href="#library">📖 المكتبة</a></li>
+      <li><a href="#courses">🎓 الدورات</a></li>
+      <li><a href="#live">📡 البث</a></li>
+      <li><a href="#community">🤝 المجتمع</a></li>
+      <li><a href="#contact">📩 تواصل</a></li>
     </ul>
-    <button class="lang-btn">EN</button>
   </nav>
   <div class="overlay"></div>
 
-  <!-- ✅ Hero -->
-  <section class="hero" id="hero">
-    <h1>منصة تعليمية للطلاب الجزائريين</h1>
-    <p>تعلم وطور مهاراتك في جميع المجالات الأكاديمية مع محتوى مجاني، مبسط واحترافي.</p>
-    <a href="#courses" class="btn">ابدأ التعلم الآن</a>
+  <!-- 🔹 Hero Section -->
+  <header id="home" class="hero">
+    <div class="hero-content">
+      <h1>مرحباً بك في منصتك التعليمية</h1>
+      <p>مكتبة مجانية + دورات تفاعلية + مجتمع تعليمي لطلاب الجزائر</p>
+      <a href="#library" class="btn">📚 تصفح المكتبة</a>
+    </div>
+  </header>
+
+  <!-- 🔹 Library Section -->
+  <section id="library" class="section">
+    <h2>📚 مكتبة شاملة</h2>
+    <p>كتب ومقالات في جميع المجالات التعليمية.</p>
   </section>
 
-  <!-- ✅ Courses -->
-  <section id="courses">
-    <h2 class="page-title">📚 الدروس</h2>
-    <p class="page-subtitle">دروس مبسطة لجميع المراحل الدراسية</p>
-    <div class="card">رياضيات</div>
-    <div class="card">علوم</div>
-    <div class="card">لغات</div>
-    <div class="card">تاريخ وجغرافيا</div>
+  <!-- 🔹 Courses Section -->
+  <section id="courses" class="section">
+    <h2>🎓 الدورات</h2>
+    <p>دورات تعليمية تفاعلية لجميع المستويات.</p>
   </section>
 
-  <!-- ✅ Library -->
-  <section id="library">
-    <h2 class="page-title">📖 المكتبة</h2>
-    <p class="page-subtitle">مراجع وكتب رقمية في مختلف التخصصات</p>
-    <div class="book-card">كتاب الرياضيات</div>
-    <div class="book-card">قاموس اللغة</div>
-    <div class="book-card">موسوعة العلوم</div>
+  <!-- 🔹 Live Section -->
+  <section id="live" class="section">
+    <h2>📡 بث مباشر</h2>
+    <p>محاضرات مباشرة مع الأساتذة.</p>
   </section>
 
-  <!-- ✅ Blog -->
-  <section id="blog">
-    <h2 class="page-title">📰 المقالات</h2>
-    <p class="page-subtitle">أحدث المواضيع التعليمية والثقافية</p>
-    <div class="post-card">كيف تذاكر بذكاء</div>
-    <div class="post-card">أهمية القراءة اليومية</div>
-    <div class="post-card">التكنولوجيا في التعليم</div>
+  <!-- 🔹 Community Section -->
+  <section id="community" class="section">
+    <h2>🤝 المجتمع</h2>
+    <p>انضم إلى مجتمع طلابي تعليمي متكامل.</p>
   </section>
 
-  <!-- ✅ About -->
-  <section id="about">
-    <h2 class="page-title">ℹ️ عن الموقع</h2>
-    <p class="page-subtitle">منصة تعليمية مفتوحة المصدر موجهة لطلاب الجزائر من جميع المستويات، 
-    تهدف إلى توفير محتوى مجاني وشامل.</p>
+  <!-- 🔹 Contact Section -->
+  <section id="contact" class="section">
+    <h2>📩 تواصل معنا</h2>
+    <p>هل لديك استفسار؟ لا تتردد في مراسلتنا.</p>
   </section>
 
-  <!-- ✅ Contact -->
-  <section id="contact">
-    <h2 class="page-title">📬 اتصل بنا</h2>
-    <p class="page-subtitle">نسعد بتواصلكم واقتراحاتكم لتطوير المنصة</p>
-    <form>
-      <input type="text" placeholder="الاسم" required>
-      <input type="email" placeholder="البريد الإلكتروني" required>
-      <textarea placeholder="رسالتك" required></textarea>
-      <button type="submit" class="lang-btn">إرسال</button>
-    </form>
-  </section>
-
-  <!-- ✅ Footer -->
+  <!-- 🔹 Footer -->
   <footer>
-    <p>© 2025 EduDz - جميع الحقوق محفوظة</p>
+    <p>© 2025 الجزائر التعليمية - جميع الحقوق محفوظة</p>
   </footer>
 
-  <!-- ✅ JavaScript -->
-  <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const overlay = document.querySelector('.overlay');
-
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      overlay.classList.toggle('active');
-    });
-
-    overlay.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-      overlay.classList.remove('active');
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
