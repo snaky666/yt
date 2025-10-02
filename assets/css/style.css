@@ -1,178 +1,163 @@
-/* 🌍 Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* 🌍 إعدادات عامة */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
 body {
-  font-family: 'Cairo', sans-serif;
-  background: #f4f7fb;
-  color: #1f2937;
-  line-height: 1.7;
-  scroll-behavior: smooth;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* 🌈 ألوان أساسية */
-:root {
-  --primary: #6366f1;   /* بنفسجي مشرق */
-  --secondary: #06b6d4; /* سماوي */
-  --accent: #f43f5e;    /* وردي */
-  --dark: #0f172a;
-  --light: #f9fafb;
+h1, h2 {
+  font-weight: bold;
 }
 
-/* ✅ Navbar */
+/* 🔹 Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  padding: 14px 22px;
+  background: linear-gradient(90deg, #007bff, #6f42c1);
+  padding: 15px 20px;
   color: white;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1100;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.25);
-}
-.logo {
-  font-size: 1.4rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-.menu-toggle {
-  font-size: 2rem;
-  cursor: pointer;
-  display: block;
-}
-.lang-btn {
-  background: var(--accent);
-  border: none;
-  color: white;
-  padding: 6px 14px;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-  margin-left: 10px;
-}
-.lang-btn:hover {
-  background: #be123c;
+  width: 100%;
+  z-index: 1000;
 }
 
-/* ✅ Nav links */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.lang-btn {
+  background: #ff4757;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.lang-btn:hover {
+  background: #ff6b81;
+}
+
+.menu-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  color: white;
+}
+
 .nav-links {
   list-style: none;
-  position: fixed;
-  top: 0; right: -280px;
-  width: 280px; height: 100%;
-  background: var(--dark);
-  display: flex; flex-direction: column;
-  gap: 22px;
-  padding: 80px 30px;
-  transition: 0.4s ease;
-  z-index: 1001;
+  display: flex;
+  gap: 20px;
 }
+
 .nav-links li a {
   color: white;
   text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 500;
-  transition: 0.3s;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 .nav-links li a:hover {
-  color: var(--secondary);
+  color: #ffd700;
 }
-.nav-links.active { right: 0; }
 
-/* ✅ Overlay */
-.overlay {
-  position: fixed; top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6);
-  display: none;
-  z-index: 1000;
-}
-.overlay.active { display: block; }
-
-/* سطح المكتب */
-@media(min-width: 768px) {
-  .menu-toggle { display: none; }
-  .nav-links {
-    position: static;
-    flex-direction: row;
-    height: auto;
-    background: none;
-    gap: 18px;
-    padding: 0;
+/* 🔹 للأجهزة الصغيرة */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
-  .overlay { display: none !important; }
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(135deg, #007bff, #6f42c1);
+    flex-direction: column;
+    gap: 30px;
+    padding: 80px 20px;
+    transition: left 0.3s ease;
+    z-index: 1200;
+  }
+  .nav-links.active {
+    left: 0;
+  }
+  .overlay {
+    display: none;
+  }
+  .overlay.active {
+    display: block;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 1100;
+  }
 }
 
-/* ✅ Hero */
+/* 🔹 Hero */
 .hero {
-  background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)),
-              url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-  color: white;
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 100px 20px;
-}
-.hero h1 {
-  font-size: 2.6rem;
-  margin-bottom: 14px;
-}
-.hero p {
-  font-size: 1.1rem;
-  margin: 0 auto 20px;
-  max-width: 650px;
-}
-.hero .btn {
-  display: inline-block;
-  padding: 12px 22px;
-  background: var(--secondary);
   color: white;
-  border-radius: 8px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+.btn {
+  background: #00c4ff;
+  padding: 10px 20px;
+  border-radius: 25px;
   text-decoration: none;
+  color: white;
   font-weight: bold;
   transition: 0.3s;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
-.hero .btn:hover {
-  background: var(--accent);
+.btn:hover {
+  background: #0099cc;
 }
 
-/* ✅ Sections */
-section {
-  padding: 70px 20px;
-  max-width: 1100px;
-  margin: auto;
+/* 🔹 Sections */
+.section {
+  padding: 80px 20px;
   text-align: center;
-}
-.page-title {
-  font-size: 2.2rem;
-  margin-bottom: 15px;
-  color: var(--dark);
-}
-.page-subtitle {
-  color: #6b7280;
-  margin-bottom: 40px;
-}
-
-/* ✅ Cards */
-.card, .feature-card, .book-card, .course-card, .post-card {
   background: white;
-  padding: 24px;
-  border-radius: 14px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
-.card:hover, .feature-card:hover, .book-card:hover, .course-card:hover, .post-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+.section h2 {
+  margin-bottom: 15px;
+  color: #007bff;
 }
 
-/* ✅ Footer */
+/* 🔹 Footer */
 footer {
-  background: var(--dark);
-  color: white;
+  background: #222;
+  color: #bbb;
   text-align: center;
   padding: 20px;
-  margin-top: 50px;
-  font-size: 0.95rem;
+  margin-top: 30px;
 }
