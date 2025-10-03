@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>لوحة الطالب — Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* small overrides for dashboard layout */
+    .dash-container{max-width:1100px;margin:24px auto;padding:18px}
+    .dash-grid{display:grid;grid-template-columns:2fr 1fr;gap:18px}
+    .progress{height:12px;background:linear-gradient(90deg,#eee,#f5f5f5);border-radius:8px;overflow:hidden}
+    .progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));width:0%}
+    .lesson-list{margin-top:10px}
+    .lesson{padding:8px;border-radius:8px;background:linear-gradient(180deg,#fff,#fbfdff);margin-top:8px;display:flex;justify-content:space-between;align-items:center}
+    .small-muted{color:var(--muted);font-size:13px}
+    .btn-small{padding:6px 8px;border-radius:8px;border:none;background:var(--accent);color:#fff;cursor:pointer}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="brand"><div class="logo">ED</div><div><div style="font-weight:800">لوحة الطالب</div><div class="muted">ملخص التقدم والدورات الملتحق بها</div></div></div>
+    <div class="search-bar"><a href="index.html" class="icon-btn">🏠 العودة للموقع</a></div>
+    <div class="header-actions"><div class="muted">مرحبا بك</div></div>
+  </header>
+
+  <main class="dash-container">
+    <h2>دوراتك</h2>
+    <div class="dash-grid">
+      <div>
+        <div id="courses-area"></div>
+      </div>
+      <aside class="sidebar">
+        <div style="font-weight:700">إحصاءات</div>
+        <div class="small-muted" id="stats-enrolled">الان: 0 دورة ملتحق بها</div>
+        <div class="small-muted" id="stats-complete">اكتملت: 0 درس</div>
+        <hr style="margin:12px 0;border:none;background:rgba(0,0,0,0.04);height:1px"/>
+        <div style="font-weight:700">شهادات</div>
+        <div id="cert-list" class="small-muted" style="margin-top:8px">لا توجد شهادات بعد.</div>
+      </aside>
+    </div>
+  </main>
+
+  <footer style="text-align:center;padding:18px" class="muted">حقوق © 2025 — نموذج تجريبي</footer>
+
+  <script src="app.js"></script>
+  <script>
+    // dashboard logic: read DATA from app.js and localStorage to show progress and allow marking lessons complete
+    (function(){
+      // ensure DATA exists
+      if(typeof DATA === 'undefined'){ console.error('DATA not found'); return; }
+      const enrolled = JSON.parse(localStorage.getItem('enrolled')||'[]');
+      const coursesArea = document.getElementById('courses-area');
+      const certList = document.getElementById('cert-list');
+      let totalLessonsCompleted = 0;
+      let totalLessons = 0;
+      if(enrolled.length===0){
+        coursesArea.innerHTML = '<div class="card"><div class="muted">لم تلتحق بأي دورة بعد.</div></div>';
+      } else {
+        enrolled.forEach(id=>{
+          const course = DATA.courses.find(c=>c.id===id);
+          if(!course) return;
+          // get progress data
+          const progKey = 'progress_'+id;
+          const prog = JSON.parse(localStorage.getItem(progKey) || '{"completed":[]}');
+          const lessons = course.lessons || [];
+          totalLessons += lessons.length;
+          totalLessonsCompleted += prog.completed.length;
+          const percent = Math.round((prog.completed.length / Math.max(1, lessons.length))*100);
+          const card = document.createElement('div');
+          card.className='card';
+          card.style.marginBottom='12px';
+          card.innerHTML = `<div style="display:flex;gap:12px">
+            <img src="${course.img}" alt="${course.title}" style="width:160px;height:90px;object-fit:cover;border-radius:6px"/>
+            <div style="flex:1">
+              <div style="font-weight:700">${course.title}</div>
+              <div class="small-muted">${course.teacher} • ${course.level||''}</div>
+              <div style="margin-top:10px">
+                <div class="progress"><i style="width:${percent}%"></i></div>
+                <div class="small-muted" style="margin-top:6px">${percent}% مُكتمل — ${prog.completed.length}/${lessons.length} دروس</div>
+                <div class="lesson-list" id="lessons-${id}"></div>
+              </div>
+            </div>
+          </div>`;
+          coursesArea.appendChild(card);
+          const lessonsWrap = document.getElementById('lessons-'+id);
+          lessons.forEach(ls=>{
+            const done = prog.completed.includes(ls.id);
+            const div = document.createElement('div');
+            div.className='lesson';
+            div.innerHTML = `<div><strong>${ls.title[state.lang]||ls.title.en||ls.title.ar}</strong><div class="small-muted">${ls.duration||''}</div></div>
+              <div><button class="btn-small" data-course="${id}" data-lesson="${ls.id}">${done?'✓ مكتمل':'وضع علامة كمكتمل'}</button></div>`;
+            lessonsWrap.appendChild(div);
+          });
+        });
+      }
+      // bind lesson buttons
+      document.addEventListener('click', e=>{
+        if(e.target.matches('.btn-small')){
+          const courseId = e.target.dataset.course;
+          const lessonId = e.target.dataset.lesson;
+          const key = 'progress_'+courseId;
+          const prog = JSON.parse(localStorage.getItem(key) || '{"completed":[]}');
+          if(!prog.completed.includes(lessonId)) prog.completed.push(lessonId);
+          localStorage.setItem(key, JSON.stringify(prog));
+          // refresh page small
+          location.reload();
+        }
+      });
+      // stats
+      document.getElementById('stats-enrolled').textContent = 'الان: '+enrolled.length+' دورة ملتحق بها';
+      document.getElementById('stats-complete').textContent = 'إجمالي الدروس المكتملة: '+ totalLessonsCompleted;
+      // certificates: look for certs in localStorage under 'certs' key (if any)
+      const certs = JSON.parse(localStorage.getItem('certs')||'{}');
+      const certKeys = Object.keys(certs);
+      if(certKeys.length>0){
+        certList.innerHTML = '';
+        certKeys.forEach(k=>{
+          const c = certs[k];
+          const d = document.createElement('div'); d.style.marginBottom='8px';
+          d.innerHTML = `<strong>${c.name}</strong><div class="small-muted">ID: ${c.id} — ${new Date(c.issuedAt).toLocaleString()}</div>`;
+          certList.appendChild(d);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,8 +1,8 @@
 {
-  "name": "منصة تعليمية - Demo",
-  "short_name": "EduDemo",
+  "name": "منصة تعليمية - Udemy-like (Brown Theme)",
+  "short_name": "EduBrown",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#2b6ef6"
+  "background_color": "#f6efe6",
+  "theme_color": "#7a4b2b"
 }
