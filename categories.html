@@ -1,11 +1,6 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title data-i18n="home">منصة تعليمية</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title data-i18n="categories">التصنيفات</title><link rel="stylesheet" href="styles.css"></head>
 <body>
   <header class="header">
   <div class="brand">
@@ -42,13 +37,22 @@
 </aside>
 
     <main class="main">
-      <h1 class="page-title" data-i18n="recommended">تعلم مهارة جديدة الآن</h1>
+      <h1 class="page-title" data-i18n="categories">التصنيفات</h1>
       <section class="section">
-        <div id="courses-grid" class="grid"></div>
+        <div class="grid" id="cats-grid"></div>
       </section>
-      <div class="footer">حقوق © 2025 — نموذج تجريبي</div>
     </main>
   </div>
   <script src="shared.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const wrap = document.getElementById('cats-grid');
+      DATA.categories.forEach(cat=>{
+        const card = document.createElement('div'); card.className='card';
+        card.innerHTML = "<div class='card-body'><div class='title'>" + cat + "</div><div class='meta'>صفحة مخصصة لعرض الدورات في " + cat + "</div><div style='margin-top:auto'><a href='courses.html' class='lang-btn'>عرض</a></div></div>";
+        wrap.appendChild(card);
+      });
+    });
+  </script>
 </body>
 </html>
