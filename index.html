@@ -1,0 +1,85 @@
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>منصة تعليمية — Demo</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logo">ED</div>
+      <div>
+        <div class="site-title" id="site-title">منصة تعليمية</div>
+        <div class="muted">منصة تجريبية مستوحاة من Coursera</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <div id="user-box"></div>
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="ar">العربية</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h2 class="hero-title" id="hero-title">أكبر مكتبة تعليمية رقمية</h2>
+        <p class="hero-lead" id="hero-lead">دورات، كتب، ودروس من مصادر عالمية.</p>
+        <div class="search-box">
+          <input id="search" class="search-input" placeholder="ابحث عن دورة أو كتاب...">
+          <button class="primary-btn">ابحث</button>
+        </div>
+      </div>
+      <div class="hero-right" style="min-width:260px;text-align:right">
+        <div class="card">
+          <div style="font-weight:700">المسجلين</div>
+          <div class="muted" style="margin-top:6px" id="total-users">0 مستخدم</div>
+          <div style="margin-top:12px"><div class="section-title">دوراتك</div><div id="enrolled-wrap"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <div>
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h3>الكتب</h3>
+            <div class="muted" id="total-books">0 كتب</div>
+          </div>
+          <div id="books-wrap" class="cards"></div>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h3>الدورات</h3>
+            <div class="muted" id="total-courses">0 دورات</div>
+          </div>
+          <div id="courses-wrap" class="courses"></div>
+        </div>
+      </div>
+
+      <aside class="card sidebar">
+        <div class="section-title">الأكثر شيوعاً</div>
+        <div class="popular-list">
+          <div class="muted">CS50 — Harvard</div>
+          <div class="muted">MIT 6.0001</div>
+          <div class="muted">freeCodeCamp</div>
+        </div>
+      </aside>
+    </div>
+
+    <div id="modal" style="display:none"></div>
+
+    <footer class="footer">حقوق © 2025 — نموذج تجريبي</footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
