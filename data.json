@@ -1,0 +1,107 @@
+{
+  "courses": [
+    {
+      "id": "cs50",
+      "title": {
+        "ar": "CS50 مقدمة علوم الحاسوب",
+        "en": "CS50: Introduction to Computer Science",
+        "fr": "CS50 : Introduction à l'informatique"
+      },
+      "desc": {
+        "ar": "دورة مدخلية من Harvard تغطي الخوارزميات، هياكل البيانات، والبرمجة.",
+        "en": "Harvard's entry-level CS course covering algorithms, data structures, and programming.",
+        "fr": "Cours d'introduction de Harvard couvrant algorithmes et structures de données."
+      },
+      "source": "https://cs50.harvard.edu/x/2025/"
+    },
+    {
+      "id": "mit6001",
+      "title": {
+        "ar": "مقدمة في البرمجة بلغة بايثون (MIT 6.0001)",
+        "en": "MIT 6.0001: Introduction to Computer Science and Programming in Python",
+        "fr": "MIT 6.0001 : Introduction à la programmation en Python"
+      },
+      "desc": {
+        "ar": "مقررات MIT OpenCourseWare لتعلم أساسيات البرمجة بالبايثون.",
+        "en": "MIT OCW course teaching basic programming concepts in Python.",
+        "fr": "Cours OCW du MIT enseignant les concepts de programmation en Python."
+      },
+      "source": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/"
+    },
+    {
+      "id": "freecodecamp",
+      "title": {
+        "ar": "منهج freeCodeCamp",
+        "en": "freeCodeCamp Curriculum",
+        "fr": "Curriculum freeCodeCamp"
+      },
+      "desc": {
+        "ar": "محتوى تفاعلي مجاني لتعلم الويب، جافاسكربت، وقواعد البيانات.",
+        "en": "Interactive free curriculum for web development, JavaScript, and databases.",
+        "fr": "Curriculum interactif gratuit pour le développement web et JavaScript."
+      },
+      "source": "https://www.freecodecamp.org/"
+    },
+    {
+      "id": "khan-calculus",
+      "title": {
+        "ar": "التفاضل والتكامل - Khan Academy",
+        "en": "Calculus (Khan Academy)",
+        "fr": "Calcul Différentiel (Khan Academy)"
+      },
+      "desc": {
+        "ar": "مسار تفاضل وتكامل مجاني وشامل.",
+        "en": "Comprehensive free calculus track.",
+        "fr": "Parcours complet de calcul gratuit."
+      },
+      "source": "https://www.khanacademy.org/math/calculus-1"
+    },
+    {
+      "id": "ux-design",
+      "title": {
+        "ar": "تصميم تجربة المستخدم - دورة عمليّة",
+        "en": "Practical UX Design",
+        "fr": "Conception UX pratique"
+      },
+      "desc": {
+        "ar": "دورة تطبيقية عن مبادئ تصميم تجربة المستخدم.",
+        "en": "Applied course on user experience design principles.",
+        "fr": "Cours appliqué sur les principes UX."
+      },
+      "source": "https://www.interaction-design.org/courses"
+    }
+  ],
+  "books": [
+    {
+      "id": "eloquent-js",
+      "title": {
+        "ar": "Eloquent JavaScript",
+        "en": "Eloquent JavaScript",
+        "fr": "Eloquent JavaScript"
+      },
+      "author": "Marijn Haverbeke",
+      "source": "https://eloquentjavascript.net/",
+      "file": "https://eloquentjavascript.net/Eloquent_JavaScript_small.pdf"
+    },
+    {
+      "id": "ydkjs",
+      "title": {
+        "ar": "You Don't Know JS",
+        "en": "You Don't Know JS",
+        "fr": "You Don't Know JS"
+      },
+      "author": "Kyle Simpson",
+      "source": "https://github.com/getify/You-Dont-Know-JS"
+    },
+    {
+      "id": "think-python",
+      "title": {
+        "ar": "Think Python",
+        "en": "Think Python",
+        "fr": "Think Python"
+      },
+      "author": "Allen B. Downey",
+      "source": "https://greenteapress.com/thinkpython/"
+    }
+  ]
+}
