@@ -3,94 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الجزائر التعليمية</title>
-  <link rel="stylesheet" href="style.css">
+  <title>الجزائر التعليمية 📚</title>
+
+  <!-- رابط ملف CSS من داخل المجلد -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <!-- 🔹 Navbar -->
-  <nav class="navbar">
+  <!-- رأس الصفحة -->
+  <header class="navbar">
     <div class="logo">📚 الجزائر التعليمية</div>
-    <button class="lang-btn">EN 🌐</button>
-    <div class="menu-toggle">☰</div>
-    <ul class="nav-links">
-      <li><a href="#home">🏠 الرئيسية</a></li>
-      <li><a href="#library">📖 المكتبة</a></li>
-      <li><a href="#courses">🎓 الدورات</a></li>
-      <li><a href="#live">📡 البث</a></li>
-      <li><a href="#community">🤝 المجتمع</a></li>
-      <li><a href="#contact">📩 تواصل</a></li>
-    </ul>
-  </nav>
-  <div class="overlay"></div>
-
-  <!-- 🔹 Hero Section -->
-  <header id="home" class="hero">
-    <div class="hero-content">
-      <h1>مرحباً بك في منصتك التعليمية</h1>
-      <p>مكتبة مجانية + دورات تفاعلية + مجتمع تعليمي لطلاب الجزائر</p>
-      <a href="#library" class="btn">📚 تصفح المكتبة</a>
-    </div>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#home">🏠 الرئيسية</a>
+      <a href="#library">📖 المكتبة</a>
+      <a href="#courses">🎓 الدورات</a>
+      <a href="#live">📡 البث</a>
+      <a href="#community">🤝 المجتمع</a>
+      <a href="#contact">✉️ تواصل</a>
+    </nav>
   </header>
 
-  <!-- 🔹 Library Section -->
-  <section id="library" class="section">
+  <!-- البانر -->
+  <section id="home" class="hero">
+    <h1>مرحباً بك في منصتك التعليمية</h1>
+    <p>مكتبة مجانية + دورات تفاعلية + مجتمع تعليمي لطلاب الجزائر</p>
+    <a href="#library" class="btn">📖 تصفح المكتبة</a>
+  </section>
+
+  <!-- أقسام الموقع -->
+  <section id="library" class="card">
     <h2>📚 مكتبة شاملة</h2>
     <p>كتب ومقالات في جميع المجالات التعليمية.</p>
   </section>
 
-  <!-- 🔹 Courses Section -->
-  <section id="courses" class="section">
+  <section id="courses" class="card">
     <h2>🎓 الدورات</h2>
     <p>دورات تعليمية تفاعلية لجميع المستويات.</p>
   </section>
 
-  <!-- 🔹 Live Section -->
-  <section id="live" class="section">
+  <section id="live" class="card">
     <h2>📡 بث مباشر</h2>
     <p>محاضرات مباشرة مع الأساتذة.</p>
   </section>
 
-  <!-- 🔹 Community Section -->
-  <section id="community" class="section">
+  <section id="community" class="card">
     <h2>🤝 المجتمع</h2>
-    <p>انضم إلى مجتمع طلابي تعليمي متكامل.</p>
+    <p>انضم إلى مجتمع طلابي نشط وتفاعل مع زملائك.</p>
   </section>
 
-  <!-- 🔹 Contact Section -->
-  <section id="contact" class="section">
-    <h2>📩 تواصل معنا</h2>
-    <p>هل لديك استفسار؟ لا تتردد في مراسلتنا.</p>
+  <section id="contact" class="card">
+    <h2>✉️ تواصل معنا</h2>
+    <p>لديك سؤال أو اقتراح؟ لا تتردد في التواصل معنا.</p>
   </section>
 
-  <!-- 🔹 Footer -->
-  <footer>
+  <!-- الفوتر -->
+  <footer class="footer">
     <p>© 2025 الجزائر التعليمية - جميع الحقوق محفوظة</p>
   </footer>
-  <script src="script.js"></script>
-  <script>
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-const overlay = document.querySelector(".overlay");
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-  overlay.classList.toggle("active");
-});
-
-overlay.addEventListener("click", () => {
-  navLinks.classList.remove("active");
-  overlay.classList.remove("active");
-});
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
-    overlay.classList.remove("active");
-  });
-});
-</script>
-</body>
-</html>
-
+  <!-- ملف JS من داخل المجلد -->
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
