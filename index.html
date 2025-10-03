@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>منصة تعليمية - Prototype (AR/EN/FR)</title>
+  <meta name="description" content="منصة تعليمية احترافية - واجهة تجريبية بتقنيات HTML/CSS/JS - تدعم العربية، الإنجليزية والفرنسية" />
+  <meta name="theme-color" content="#071427" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- QR libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">ED</div>
+      <div>
+        <div id="site-title">منصة التعليم العالمية</div>
+        <div class="muted" style="font-size:12px">تعلم، شارك، ارتقِ</div>
+      </div>
+    </div>
+
+    <div class="nav">
+      <div class="lang-select" role="navigation" aria-label="language switcher">
+        <button class="chip" data-lang="ar">العربية</button>
+        <button class="chip" data-lang="en">English</button>
+        <button class="chip" data-lang="fr">Français</button>
+      </div>
+      <div class="row">
+        <button class="btn" id="open-login">دخول</button>
+        <button class="btn" id="open-signup">انضم كطالب</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <h1 id="hero-title">أكبر مكتبة تعليمية رقمية</h1>
+        <p class="lead" id="hero-lead">مئات الدورات - مسارات مهنية - شهادات معتمدة - تجربة تعليمية تفاعلية.</p>
+
+        <div class="search">
+          <input id="search" placeholder="ابحث عن دورة، موضوع أو مدرس"/>
+          <button class="chip" id="filter-btn">تصفية</button>
+        </div>
+
+        <div class="filters" id="filters">
+          <div class="chip" data-filter="all">الكل</div>
+          <div class="chip" data-filter="programming">برمجة</div>
+          <div class="chip" data-filter="design">تصميم</div>
+          <div class="chip" data-filter="business">أعمال</div>
+          <div class="chip" data-filter="science">علوم</div>
+        </div>
+
+        <div style="margin-top:12px" class="row">
+          <div class="badge" id="total-courses">0 دورات</div>
+          <div class="badge" id="total-users">0 مستخدم</div>
+        </div>
+
+        <div style="margin-top:12px">
+          <div class="muted">اقتراحات لك</div>
+          <div id="ai-suggestions" style="margin-top:8px"></div>
+        </div>
+
+      </div>
+
+      <aside class="hero-card">
+        <h3 id="popular-title">دورات مميزة</h3>
+        <div id="popular-list"></div>
+      </aside>
+    </section>
+
+    <section class="hero-card" style="margin-top:16px">
+      <h2 id="library-title">المكتبة</h2>
+      <div class="grid" id="courses-grid" aria-live="polite"></div>
+    </section>
+
+    <!-- modal for course detail -->
+    <div id="modal" class="modal" role="dialog" aria-hidden="true">
+      <div class="panel" role="document">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h3 id="modal-title">عنوان الدورة</h3>
+          <div class="row">
+            <button class="chip" id="download-cert">شهادة</button>
+            <button class="chip" id="close-modal">إغلاق</button>
+          </div>
+        </div>
+        <div id="modal-body">
+          <!-- content injected by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- certificate verification section -->
+    <section class="hero-card" style="margin-top:16px">
+      <h2 id="verify-title">التحقق من الشهادات</h2>
+      <div>
+        <div class="verify-box">
+          <input id="verify-input" placeholder="أدخل رمز الشهادة أو امسح الكود" style="flex:1;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit"/>
+          <button class="chip" id="verify-btn">تحقق</button>
+          <button class="chip" id="scan-camera" onclick="startQrScanner()">فحص بالكاميرا</button>
+        </div>
+        <div id="verify-result" style="margin-top:12px"></div>
+      </div>
+    </section>
+
+    <!-- teacher dashboard & admin mockup -->
+    <section class="hero-card" style="margin-top:16px">
+      <h2>لوحة تحكم (طالب / مدرس) - تجريبي</h2>
+      <div class="dashboard">
+        <aside class="sidebar" id="sidebar">
+          <div id="profile-box">
+            <div style="font-weight:700" id="profile-name">طالب تجريبي</div>
+            <div class="muted" id="profile-role">مستخدم</div>
+            <div style="margin-top:8px"><button class="chip" id="logout">تسجيل الخروج</button></div>
+          </div>
+          <hr style="opacity:0.06;border:none;height:1px;margin:8px 0;background:linear-gradient(90deg,transparent,var(--glass),transparent)" />
+          <nav aria-label="dashboard nav">
+            <div class="chip" id="dash-courses">دوراتي</div>
+            <div class="chip" id="dash-progress">التقدم</div>
+            <div class="chip" id="dash-forum">المنتدى</div>
+            <div class="chip" id="dash-teacher">لوحة المدرس</div>
+            <div class="chip" id="dash-payments">المدفوعات</div>
+          </nav>
+        </aside>
+        <main class="main" id="dash-main">
+          <h3>أحدث الدروس</h3>
+          <div id="dash-list"></div>
+        </main>
+      </div>
+    </section>
+
+    <footer>
+      <div>حقوق الملكية © منصة التعليم العالمية — نموذج/نسخة تجريبية</div>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
