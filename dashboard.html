@@ -1,50 +1,31 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title data-i18n="dashboard">لوحة الطالب</title><link rel="stylesheet" href="styles.css"></head>
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>لوحة الطالب</title><link rel="stylesheet" href="styles.css"></head>
 <body>
-  <header class="header">
-    <div class="brand"><div class="logo">ED</div><div><div style="font-weight:800">لوحة الطالب</div><div class="muted">ملخص التقدم</div></div></div>
-    <div class="header-center"><input class="search-input" data-i18n-placeholder="search_placeholder"></div>
-    <div class="header-actions"><a class="icon-btn" href="index.html">🏠 الرئيسية</a></div>
-  </header>
-  <div class="app">
-    <aside class="sidebar">
-      <nav>
-        <a class="nav-link" href="dashboard.html" data-target="dashboard.html">📊 لوحة الطالب</a>
-        <a class="nav-link" href="index.html">🏠 الرئيسية</a>
-        <a class="nav-link" href="courses.html">💻 الدورات</a>
-      </nav>
-    </aside>
-    <main class="main">
-      <h1 class="page-title">الدورات الملتحق بها</h1>
-      <div id="my-courses"></div>
-      <h2 style="margin-top:18px">الشهادات</h2>
-      <div id="certs"></div>
-    </main>
-  </div>
-  <script src="shared.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', ()=>{
-      const wrap = document.getElementById('my-courses');
-      const enrolled = JSON.parse(localStorage.getItem('enrolled')||'[]');
-      if(enrolled.length===0){ wrap.innerHTML = "<div class='card'><div class='card-body'><div class='muted'>لم تلتحق بأي دورة بعد.</div></div></div>"; return; }
-      enrolled.forEach(id=>{
-        const c = DATA.courses.find(x=>x.id===id); if(!c) return;
-        const d = document.createElement('div'); d.className='card'; d.style.marginBottom='8px';
-        var title = state.lang==='ar'?c.title_ar:c.title_en;
-        d.innerHTML = "<div class='card-body' style='display:flex;gap:12px;align-items:center'><img src='"+c.img+"' style='width:160px;height:90px;object-fit:cover;border-radius:6px'/><div><div style='font-weight:700'>"+ title + "</div><div class='meta'>"+c.teacher+"</div><div style='margin-top:8px'><a class='lang-btn' href='course.html?id="+c.id+"'>اذهب للدورة</a></div></div></div>";
-        wrap.appendChild(d);
-      });
-      const certs = JSON.parse(localStorage.getItem('certs')||'{}');
-      const keys = Object.keys(certs);
-      const cwrap = document.getElementById('certs');
-      if(keys.length===0){ cwrap.innerHTML = "<div class='muted'>لا توجد شهادات بعد.</div>"; return; }
-      keys.forEach(k=>{
-        const obj = certs[k];
-        const el = document.createElement('div'); el.className='card'; el.style.marginBottom='8px'; el.innerHTML = "<div class='card-body'><div style='font-weight:700'>"+obj.name+"</div><div class='meta'>ID: "+obj.id+" — "+ (new Date(obj.issuedAt)).toLocaleString() +"</div></div>";
-        cwrap.appendChild(el);
-      });
-    });
-  </script>
+<header class="header">
+  <div class="brand"><div class="logo">ED</div><div class="site-name">منصة تعليمية</div></div>
+  <div class="header-center"><input class="search-input" placeholder="ابحث عن دورة، تقنية أو مدرس..."></div>
+  <div class="header-actions"><button class="icon-btn">🔔</button><button class="icon-btn">🛒</button><div class="lang-switch"><button class="lang-btn" data-lang="ar">العربية</button><button class="lang-btn" data-lang="en">EN</button></div></div>
+</header>
+<div class="app">
+<aside class="sidebar">
+  <div class="side-top"><div class="side-logo">ED</div><div><div style="font-weight:800">منصة تعليمية</div><div class="meta">تعليم عالي الجودة</div></div></div>
+  <nav class="nav">
+    <a href="index.html">🏠 <span data-i18n-key="home">الرئيسية</span></a>
+    <a href="courses.html">💻 <span data-i18n-key="courses">الدورات</span></a>
+    <a href="books.html">📚 <span data-i18n-key="books">الكتب</span></a>
+    <a href="library.html">📁 <span data-i18n-key="library">المكتبة</span></a>
+    <a href="dashboard.html">📊 <span data-i18n-key="dashboard">لوحة الطالب</span></a>
+    <a href="about.html">ℹ️ <span data-i18n-key="about">من نحن</span></a>
+    <a href="contact.html">✉️ <span data-i18n-key="contact">اتصل بنا</span></a>
+  </nav>
+</aside>
+<main class="main">
+  <h1 class="page-title">لوحة الطالب</h1>
+  <section class="section"><h2>دوراتك</h2><div id="my-courses"></div></section>
+  <section class="section"><h2>الشهادات</h2><div id="certs"></div></section>
+</main>
+</div>
+<script src="main.js"></script>
 </body>
 </html>

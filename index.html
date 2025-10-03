@@ -1,54 +1,31 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title data-i18n="home">منصة تعليمية</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>الرئيسية</title><link rel="stylesheet" href="styles.css"></head>
 <body>
-  <header class="header">
-  <div class="brand">
-    <div class="logo">ED</div>
-    <div>
-      <div style="font-weight:800" data-i18n="home">منصة تعليمية</div>
-      <div class="muted">تعليم عالي الجودة</div>
-    </div>
-  </div>
-  <div class="header-center">
-    <input class="search-input" data-i18n-placeholder="search_placeholder" />
-  </div>
-  <div class="header-actions">
-    <div class="lang-switch">
-      <button class="lang-btn" data-lang="ar">العربية</button>
-      <button class="lang-btn" data-lang="en">EN</button>
-    </div>
-    <div style="width:12px"></div>
-    <div><a class="icon-btn" href="dashboard.html" style="padding:8px 12px;border-radius:8px;background:var(--accent);color:#fff">لوحة التحكم</a></div>
-  </div>
+<header class="header">
+  <div class="brand"><div class="logo">ED</div><div class="site-name">منصة تعليمية</div></div>
+  <div class="header-center"><input class="search-input" placeholder="ابحث عن دورة، تقنية أو مدرس..."></div>
+  <div class="header-actions"><button class="icon-btn">🔔</button><button class="icon-btn">🛒</button><div class="lang-switch"><button class="lang-btn" data-lang="ar">العربية</button><button class="lang-btn" data-lang="en">EN</button></div></div>
 </header>
-
-  <div class="app">
-    <aside class="sidebar">
-  <nav>
-    <a class="nav-link" href="index.html" data-target="index.html">🏠 <span data-i18n="home">الرئيسية</span></a>
-    <a class="nav-link" href="courses.html" data-target="courses.html">💻 <span data-i18n="courses">الدورات</span></a>
-    <a class="nav-link" href="books.html" data-target="books.html">📚 <span data-i18n="books">الكتب</span></a>
-    <a class="nav-link" href="categories.html" data-target="categories.html">🔖 <span data-i18n="categories">التصنيفات</span></a>
-    <a class="nav-link" href="dashboard.html" data-target="dashboard.html">📊 <span data-i18n="dashboard">لوحة الطالب</span></a>
-    <a class="nav-link" href="about.html" data-target="about.html">ℹ️ <span data-i18n="about">من نحن</span></a>
-    <a class="nav-link" href="contact.html" data-target="contact.html">✉️ <span data-i18n="contact">اتصل بنا</span></a>
+<div class="app">
+<aside class="sidebar">
+  <div class="side-top"><div class="side-logo">ED</div><div><div style="font-weight:800">منصة تعليمية</div><div class="meta">تعليم عالي الجودة</div></div></div>
+  <nav class="nav">
+    <a href="index.html">🏠 <span data-i18n-key="home">الرئيسية</span></a>
+    <a href="courses.html">💻 <span data-i18n-key="courses">الدورات</span></a>
+    <a href="books.html">📚 <span data-i18n-key="books">الكتب</span></a>
+    <a href="library.html">📁 <span data-i18n-key="library">المكتبة</span></a>
+    <a href="dashboard.html">📊 <span data-i18n-key="dashboard">لوحة الطالب</span></a>
+    <a href="about.html">ℹ️ <span data-i18n-key="about">من نحن</span></a>
+    <a href="contact.html">✉️ <span data-i18n-key="contact">اتصل بنا</span></a>
   </nav>
 </aside>
-
-    <main class="main">
-      <h1 class="page-title" data-i18n="recommended">تعلم مهارة جديدة الآن</h1>
-      <section class="section">
-        <div id="courses-grid" class="grid"></div>
-      </section>
-      <div class="footer">حقوق © 2025 — نموذج تجريبي</div>
-    </main>
-  </div>
-  <script src="shared.js"></script>
+<main class="main">
+  <section class="hero"><div class="hero-left"><h1 class="hero-title">تعلم مهارة جديدة الآن</h1><p class="hero-sub">مئات الدورات العملية والشهادات المعتمدة</p></div></section>
+  <section class="section"><h2 class="page-title">مقترح لك</h2><div id="courses-grid" class="grid"></div></section>
+  <div class="footer">حقوق © 2025 — نموذج تجريبي</div>
+</main>
+</div>
+<script src="main.js"></script>
 </body>
 </html>

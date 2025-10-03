@@ -1,27 +1,31 @@
 <!doctype html>
-<html lang="ar" dir="rtl"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title data-i18n="contact">اتصل بنا</title><link rel="stylesheet" href="styles.css"></head><body>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>اتصل بنا</title><link rel="stylesheet" href="styles.css"></head>
+<body>
 <header class="header">
-  <div class="brand"><div class="logo">ED</div><div><div style="font-weight:800">اتصل بنا</div><div class="muted">سعداء بتواصلك</div></div></div>
-  <div class="header-center"><input class="search-input" data-i18n-placeholder="search_placeholder" /></div>
-  <div class="header-actions"><a class="icon-btn" href="index.html">🏠</a></div>
+  <div class="brand"><div class="logo">ED</div><div class="site-name">منصة تعليمية</div></div>
+  <div class="header-center"><input class="search-input" placeholder="ابحث عن دورة، تقنية أو مدرس..."></div>
+  <div class="header-actions"><button class="icon-btn">🔔</button><button class="icon-btn">🛒</button><div class="lang-switch"><button class="lang-btn" data-lang="ar">العربية</button><button class="lang-btn" data-lang="en">EN</button></div></div>
 </header>
 <div class="app">
-  <aside class="sidebar">
-  <nav>
-    <a class="nav-link" href="index.html" data-target="index.html">🏠 <span data-i18n="home">الرئيسية</span></a>
-    <a class="nav-link" href="courses.html" data-target="courses.html">💻 <span data-i18n="courses">الدورات</span></a>
-    <a class="nav-link" href="books.html" data-target="books.html">📚 <span data-i18n="books">الكتب</span></a>
-    <a class="nav-link" href="categories.html" data-target="categories.html">🔖 <span data-i18n="categories">التصنيفات</span></a>
-    <a class="nav-link" href="dashboard.html" data-target="dashboard.html">📊 <span data-i18n="dashboard">لوحة الطالب</span></a>
-    <a class="nav-link" href="about.html" data-target="about.html">ℹ️ <span data-i18n="about">من نحن</span></a>
-    <a class="nav-link" href="contact.html" data-target="contact.html">✉️ <span data-i18n="contact">اتصل بنا</span></a>
+<aside class="sidebar">
+  <div class="side-top"><div class="side-logo">ED</div><div><div style="font-weight:800">منصة تعليمية</div><div class="meta">تعليم عالي الجودة</div></div></div>
+  <nav class="nav">
+    <a href="index.html">🏠 <span data-i18n-key="home">الرئيسية</span></a>
+    <a href="courses.html">💻 <span data-i18n-key="courses">الدورات</span></a>
+    <a href="books.html">📚 <span data-i18n-key="books">الكتب</span></a>
+    <a href="library.html">📁 <span data-i18n-key="library">المكتبة</span></a>
+    <a href="dashboard.html">📊 <span data-i18n-key="dashboard">لوحة الطالب</span></a>
+    <a href="about.html">ℹ️ <span data-i18n-key="about">من نحن</span></a>
+    <a href="contact.html">✉️ <span data-i18n-key="contact">اتصل بنا</span></a>
   </nav>
 </aside>
-
-  <main class="main"><h1 class="page-title">اتصل بنا</h1><div class="card"><div class="card-body"><form id="contact-form"><div style="display:flex;gap:8px;flex-direction:column"><input placeholder="اسمك" style="padding:8px;border-radius:8px;border:1px solid #eee"/><input placeholder="بريدك" style="padding:8px;border-radius:8px;border:1px solid #eee"/><textarea placeholder="رسالتك" style="padding:8px;border-radius:8px;border:1px solid #eee"></textarea><button class="btn-enroll" type="button" id="send-msg">أرسل</button></div></form></div></div></main>
+<main class="main">
+  <h1 class="page-title">اتصل بنا</h1>
+  <div class="card"><div class="card-body"><form id="contact"><input placeholder="اسمك" style="padding:8px;border-radius:8px;border:1px solid #eee;margin-bottom:8px"/><input placeholder="بريدك" style="padding:8px;border-radius:8px;border:1px solid #eee;margin-bottom:8px"/><textarea placeholder="رسالتك" style="padding:8px;border-radius:8px;border:1px solid #eee;margin-bottom:8px"></textarea><button class="btn" type="button" id="send">أرسل</button></form></div></div>
+</main>
 </div>
-<script src="shared.js"></script>
-<script>
-document.getElementById('send-msg').addEventListener('click', ()=>{ alert('تم إرسال الرسالة (تجريبي)'); document.getElementById('contact-form').reset(); });
-</script>
-</body></html>
+<script src="main.js"></script>
+<script>document.getElementById('send').addEventListener('click', function(){ alert('تم إرسال الرسالة (تجريبي)'); document.getElementById('contact').reset(); });</script>
+</body>
+</html>

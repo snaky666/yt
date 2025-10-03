@@ -1,8 +1,8 @@
 {
-  "name": "منصة تعليمية",
-  "short_name": "EduBrown",
+  "name": "منصة تعليمية - Pro",
+  "short_name": "EduPro",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#fbf6ef",
-  "theme_color": "#7a4b2b"
+  "background_color": "#fbf7f1",
+  "theme_color": "#6b3f2f"
 }
