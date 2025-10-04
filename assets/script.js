@@ -7,3 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+function toggleMenu() {
+  document.getElementById("sidebar").classList.toggle("open");
+}
