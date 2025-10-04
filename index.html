@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NovaAcademy - Home</title>
-  <link rel="stylesheet" href="assets/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaAcademy</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- زر القائمة -->
+  <div class="menu-toggle">☰</div>
+
+  <!-- القائمة الجانبية -->
+  <div class="sidebar">
+    <a href="index.html">🏠 الرئيسية</a>
+    <a href="courses.html">📚 الكورسات</a>
+    <a href="login.html">🔑 تسجيل الدخول</a>
+    <a href="register.html">📝 إنشاء حساب</a>
+  </div>
+
+  <!-- الهيدر -->
   <header>
-    <div class="logo">🌌 NovaAcademy</div>
-    <nav>
+    <div class="logo">NovaAcademy</div>
+    <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="courses.html">Courses</a>
       <a href="login.html">Login</a>
@@ -17,28 +29,18 @@
     </nav>
   </header>
 
+  <!-- الصفحة الرئيسية -->
   <section class="hero">
-    <h1>Welcome to NovaAcademy</h1>
+    <h1>Welcome to <span>NovaAcademy</span></h1>
     <p>Learn, grow, and shine with interactive courses designed for you.</p>
-    <a class="btn" href="courses.html">Explore Courses</a>
+    <button>Explore Courses</button>
   </section>
 
+  <!-- الفوتر -->
   <footer>
     <p>© 2025 NovaAcademy. All rights reserved.</p>
   </footer>
-</body><!-- زر القائمة للهاتف -->
-<div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
 
-<!-- طبقة شفافة -->
-<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
-
-<!-- القائمة الجانبية -->
-<nav id="sidebar" class="sidebar">
-  <a href="index.html">🏠 الرئيسية</a>
-  <a href="courses.html">📚 الكورسات</a>
-  <a href="login.html">🔑 تسجيل الدخول</a>
-  <a href="register.html">📝 إنشاء حساب</a>
-</nav>
-
-
+  <script src="script.js"></script>
+</body>
 </html>
