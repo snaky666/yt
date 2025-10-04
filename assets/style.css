@@ -80,3 +80,58 @@ footer {
   background: #161b22;
   margin-top: 40px;
 }
+/* زر القائمة في الهاتف */
+.mobile-menu-btn {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px 15px;
+  background: #111;
+  color: #fff;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1001;
+  border-radius: 8px;
+}
+
+/* القائمة الجانبية */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 220px;
+  height: 100%;
+  background: #1e1e1e;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  gap: 20px;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 20px;
+  transition: background 0.2s;
+}
+
+.sidebar a:hover {
+  background: #333;
+  border-radius: 6px;
+}
+
+/* حالة الفتح */
+.sidebar.open {
+  left: 0;
+}
+
+/* إظهار زر القائمة فقط في الهاتف */
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+}
