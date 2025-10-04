@@ -1,46 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NovaAcademy</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NovaAcademy — Learn Smart</title><link rel="stylesheet" href="assets/style.css"></head>
 <body>
-  <!-- زر القائمة -->
-  <div class="menu-toggle">☰</div>
+  <button class="menu-toggle" aria-label="Open menu">☰</button>
+  <aside class="sidebar" aria-hidden="true">
+    <div class="group">
+      <img src="images/logo.svg" alt="Logo" style="width:54px;height:54px;margin-bottom:10px">
+      <div style="font-weight:700;color:var(--accent2);margin-bottom:6px">NovaAcademy</div>
+      <div style="color:var(--muted);font-size:13px">تعليم يلامس المستقبل</div>
+    </div>
+    <div class="group">
+      <a href="index.html">🏠 الرئيسية</a>
+      <a href="courses.html">📚 الكورسات</a>
+      <a href="login.html">🔑 تسجيل الدخول</a>
+      <a href="register.html">📝 إنشاء حساب</a>
+    </div>
+    <div style="margin-top:auto;color:var(--muted);font-size:13px">© 2025 NovaAcademy</div>
+  </aside>
 
-  <!-- القائمة الجانبية -->
-  <div class="sidebar">
-    <a href="index.html">🏠 الرئيسية</a>
-    <a href="courses.html">📚 الكورسات</a>
-    <a href="login.html">🔑 تسجيل الدخول</a>
-    <a href="register.html">📝 إنشاء حساب</a>
-  </div>
-
-  <!-- الهيدر -->
-  <header>
-    <div class="logo">NovaAcademy</div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="courses.html">Courses</a>
-      <a href="login.html">Login</a>
-      <a href="register.html">Register</a>
-    </nav>
+  <header class="container header">
+    <div class="brand"><img src="images/logo.svg" alt="NovaAcademy Logo"><div class="title">NovaAcademy</div></div>
+    <nav class="nav"><a href="index.html">Home</a><a href="courses.html">Courses</a><a href="login.html">Login</a><a href="register.html">Register</a></nav>
   </header>
 
-  <!-- الصفحة الرئيسية -->
-  <section class="hero">
-    <h1>Welcome to <span>NovaAcademy</span></h1>
-    <p>Learn, grow, and shine with interactive courses designed for you.</p>
-    <button>Explore Courses</button>
-  </section>
+  <main class="container">
+    <section class="hero">
+      <div class="herotext">
+        <h1>Learn smarter with <span>NovaAcademy</span></h1>
+        <p>Interactive lessons, short exercises, and progress tracking — built for motivated learners.</p>
+        <div class="cta">
+          <a class="btn" href="courses.html">Explore Courses</a>
+          <a class="btn" href="register.html" style="background:transparent;border:1px solid rgba(255,255,255,0.06);box-shadow:none">Join Now</a>
+        </div>
+      </div>
+      <div class="heroviz"><img src="images/hero.svg" alt="Illustration" style="width:100%;border-radius:12px;box-shadow:0 12px 40px rgba(2,6,23,0.6)"></div>
+    </section>
 
-  <!-- الفوتر -->
-  <footer>
-    <p>© 2025 NovaAcademy. All rights reserved.</p>
-  </footer>
+    <section style="margin-top:20px">
+      <h2 style="margin:0 0 12px">Popular Courses</h2>
+      <div class="cards">
+        <article class="card"><img src="images/course1.svg" alt=""><h3>HTML & CSS Basics</h3><p>Build beautiful and responsive websites — start with fundamentals.</p><div style="margin-top:12px"><a class="btn" href="courses.html">View Course</a></div></article>
+        <article class="card"><img src="images/course2.svg" alt=""><h3>JavaScript Essentials</h3><p>Learn JS from scratch and create interactive web apps.</p><div style="margin-top:12px"><a class="btn" href="courses.html">View Course</a></div></article>
+        <article class="card"><img src="images/course3.svg" alt=""><h3>Responsive Design</h3><p>Techniques for layouts that look great on any device.</p><div style="margin-top:12px"><a class="btn" href="courses.html">View Course</a></div></article>
+      </div>
+    </section>
+  </main>
 
-  <script src="script.js"></script>
+  <footer class="footer"><div class="container">© 2025 NovaAcademy — Built step by step</div></footer>
+  <script src="assets/script.js"></script>
 </body>
 </html>
