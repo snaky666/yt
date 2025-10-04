@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0d1117;
+  color: #c9d1d9;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #161b22;
+  padding: 10px 20px;
+}
+header .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #58a6ff;
+}
+nav a {
+  color: #c9d1d9;
+  margin-left: 15px;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #58a6ff;
+}
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.btn {
+  background: #58a6ff;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.content {
+  padding: 40px 20px;
+}
+.courses {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card {
+  background: #161b22;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 calc(33% - 20px);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+  gap: 10px;
+}
+.form input, .form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+.form button {
+  background: #58a6ff;
+  color: #fff;
+  cursor: pointer;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #161b22;
+  margin-top: 40px;
+}
