@@ -2,14 +2,11 @@
 const api = {
   async getCourses(category = '') {
     try {
-      const response = await fetch('assets/data/courses.json');
-      const courses = await response.json();
-      
-      if (category && category !== 'all') {
-        return courses.filter(course => course.category === category);
-      }
-      
-      return courses;
+      const url = category && category !== 'all' 
+        ? `/api/courses?category=${category}` 
+        : '/api/courses';
+      const response = await fetch(url);
+      return await response.json();
     } catch (error) {
       console.error('Error fetching courses:', error);
       return [];
@@ -18,9 +15,8 @@ const api = {
 
   async getCourse(id) {
     try {
-      const response = await fetch('assets/data/courses.json');
-      const courses = await response.json();
-      return courses.find(course => course.id === parseInt(id));
+      const response = await fetch(`/api/courses/${id}`);
+      return await response.json();
     } catch (error) {
       console.error('Error fetching course:', error);
       return null;
@@ -29,14 +25,11 @@ const api = {
 
   async getBooks(category = '') {
     try {
-      const response = await fetch('assets/data/books.json');
-      const books = await response.json();
-      
-      if (category && category !== 'all') {
-        return books.filter(book => book.category === category);
-      }
-      
-      return books;
+      const url = category && category !== 'all' 
+        ? `/api/books?category=${category}` 
+        : '/api/books';
+      const response = await fetch(url);
+      return await response.json();
     } catch (error) {
       console.error('Error fetching books:', error);
       return [];
@@ -45,14 +38,11 @@ const api = {
 
   async getResources(type = '') {
     try {
-      const response = await fetch('assets/data/resources.json');
-      const resources = await response.json();
-      
-      if (type && type !== 'all') {
-        return resources.filter(resource => resource.type === type);
-      }
-      
-      return resources;
+      const url = type && type !== 'all' 
+        ? `/api/resources?type=${type}` 
+        : '/api/resources';
+      const response = await fetch(url);
+      return await response.json();
     } catch (error) {
       console.error('Error fetching resources:', error);
       return [];
@@ -60,31 +50,54 @@ const api = {
   },
 
   async register(userData) {
-    console.log('Registration data:', userData);
-    alert('تم التسجيل بنجاح! (Demo Mode - البيانات لن تُحفظ)');
-    return { success: true, message: 'Registration successful (demo)' };
+    try {
+      const response = await fetch('/api/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData)
+      });
+      const data = await response.json();
+      if (data.success) {
+        alert('Registration successful!');
+      } else {
+        alert(data.error || 'Registration failed');
+      }
+      return data;
+    } catch (error) {
+      console.error('Error during registration:', error);
+      return { success: false, error: 'Registration failed' };
+    }
   },
 
   async login(credentials) {
-    console.log('Login credentials:', credentials);
-    alert('تم تسجيل الدخول بنجاح! (Demo Mode)');
-    return { success: true, message: 'Login successful (demo)' };
+    try {
+      const response = await fetch('/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(credentials)
+      });
+      const data = await response.json();
+      if (data.success) {
+        alert('Login successful!');
+        localStorage.setItem('user', JSON.stringify(data.user));
+      } else {
+        alert(data.error || 'Login failed');
+      }
+      return data;
+    } catch (error) {
+      console.error('Error during login:', error);
+      return { success: false, error: 'Login failed' };
+    }
   },
 
   async getStats() {
     try {
-      const [courses, books, resources] = await Promise.all([
-        this.getCourses(),
-        this.getBooks(),
-        this.getResources()
-      ]);
-      
-      return {
-        courses: courses.length,
-        books: books.length,
-        resources: resources.length,
-        users: 1250
-      };
+      const response = await fetch('/api/stats');
+      return await response.json();
     } catch (error) {
       console.error('Error fetching stats:', error);
       return { courses: 0, books: 0, resources: 0, users: 0 };

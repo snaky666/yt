@@ -15,13 +15,25 @@ def get_db():
 
 @app.route('/')
 def index():
-    return send_from_directory('.', 'index.html')
+    response = send_from_directory('.', 'index.html')
+    response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['Expires'] = '0'
+    return response
 
 @app.route('/<path:path>')
 def serve_static(path):
     if path.startswith('pages/') or path.startswith('assets/') or path.startswith('images/'):
-        return send_from_directory('.', path)
-    return send_from_directory('.', path)
+        response = send_from_directory('.', path)
+        response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+        response.headers['Pragma'] = 'no-cache'
+        response.headers['Expires'] = '0'
+        return response
+    response = send_from_directory('.', path)
+    response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['Expires'] = '0'
+    return response
 
 @app.route('/api/courses', methods=['GET'])
 def get_courses():
