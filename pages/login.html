@@ -115,5 +115,59 @@
 
   <script src="../assets/js/i18n.js"></script>
   <script src="../assets/js/script.js"></script>
+  
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="../assets/js/firebase-config.js"></script>
+  
+  <script>
+    // Email/Password Login
+    document.querySelector('form.demo').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const btn = this.querySelector('button[type=submit]');
+      
+      btn.disabled = true;
+      btn.textContent = 'جاري تسجيل الدخول...';
+      
+      try {
+        await signInWithEmail(email, password);
+        alert('✅ تم تسجيل الدخول بنجاح!');
+        window.location.href = '../index.html';
+      } catch (error) {
+        alert('❌ ' + (error.message || 'فشل تسجيل الدخول'));
+        btn.disabled = false;
+        btn.textContent = 'Sign In';
+      }
+    });
+    
+    // Add Google Sign In Button
+    const form = document.querySelector('form.demo');
+    const googleBtn = document.createElement('button');
+    googleBtn.type = 'button';
+    googleBtn.className = 'btn btn-outline';
+    googleBtn.style.width = '100%';
+    googleBtn.style.marginTop = '1rem';
+    googleBtn.innerHTML = '🔐 تسجيل الدخول بواسطة Google';
+    
+    googleBtn.addEventListener('click', async function() {
+      this.disabled = true;
+      this.textContent = 'جاري التحميل...';
+      
+      try {
+        await signInWithGoogle();
+        alert('✅ تم تسجيل الدخول بنجاح!');
+        window.location.href = '../index.html';
+      } catch (error) {
+        alert('❌ ' + (error.message || 'فشل تسجيل الدخول'));
+        this.disabled = false;
+        this.innerHTML = '🔐 تسجيل الدخول بواسطة Google';
+      }
+    });
+    
+    form.appendChild(googleBtn);
+  </script>
 </body>
 </html>

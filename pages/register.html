@@ -136,5 +136,79 @@
 
   <script src="../assets/js/i18n.js"></script>
   <script src="../assets/js/script.js"></script>
+  
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="../assets/js/firebase-config.js"></script>
+  
+  <script>
+    // Email/Password Registration
+    document.querySelector('form.demo').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const fullname = document.getElementById('fullname').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+      const btn = this.querySelector('button[type=submit]');
+      
+      if (password !== confirmPassword) {
+        alert('❌ كلمة المرور غير متطابقة');
+        return;
+      }
+      
+      if (password.length < 6) {
+        alert('❌ كلمة المرور يجب أن تكون 6 أحرف على الأقل');
+        return;
+      }
+      
+      btn.disabled = true;
+      btn.textContent = 'جاري التسجيل...';
+      
+      try {
+        await signUpWithEmail(email, password, fullname);
+        alert('✅ تم التسجيل بنجاح!');
+        window.location.href = '../index.html';
+      } catch (error) {
+        let errorMsg = 'فشل التسجيل';
+        if (error.code === 'auth/email-already-in-use') {
+          errorMsg = 'البريد الإلكتروني مستخدم بالفعل';
+        } else if (error.code === 'auth/invalid-email') {
+          errorMsg = 'البريد الإلكتروني غير صحيح';
+        } else if (error.code === 'auth/weak-password') {
+          errorMsg = 'كلمة المرور ضعيفة جداً';
+        }
+        alert('❌ ' + errorMsg);
+        btn.disabled = false;
+        btn.textContent = 'Sign Up';
+      }
+    });
+    
+    // Add Google Sign In Button
+    const form = document.querySelector('form.demo');
+    const googleBtn = document.createElement('button');
+    googleBtn.type = 'button';
+    googleBtn.className = 'btn btn-outline';
+    googleBtn.style.width = '100%';
+    googleBtn.style.marginTop = '1rem';
+    googleBtn.innerHTML = '🔐 التسجيل بواسطة Google';
+    
+    googleBtn.addEventListener('click', async function() {
+      this.disabled = true;
+      this.textContent = 'جاري التحميل...';
+      
+      try {
+        await signInWithGoogle();
+        alert('✅ تم التسجيل بنجاح!');
+        window.location.href = '../index.html';
+      } catch (error) {
+        alert('❌ ' + (error.message || 'فشل التسجيل'));
+        this.disabled = false;
+        this.innerHTML = '🔐 التسجيل بواسطة Google';
+      }
+    });
+    
+    form.appendChild(googleBtn);
+  </script>
 </body>
 </html>
