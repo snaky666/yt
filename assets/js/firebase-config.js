@@ -73,3 +73,6 @@ async function signOut() {
     console.error('Error signing out:', error);
   }
 }
+git add .
+git commit -m "Add Firebase Authentication"
+git push origin main
