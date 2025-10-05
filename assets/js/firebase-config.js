@@ -2,12 +2,13 @@
 // Firebase Configuration
 // استبدل هذه القيم بقيمك من Firebase Console
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyBQIPfJlzoTWgjeAEf5kxlylPM0O-ZrGps",
+  authDomain: "novaacademy-aeea4.firebaseapp.com",
+  projectId: "novaacademy-aeea4",
+  storageBucket: "novaacademy-aeea4.firebasestorage.app",
+  messagingSenderId: "62427684859",
+  appId: "1:62427684859:web:a29ade664613ec99e9b55e",
+  measurementId: "G-MF5GGXWVSP"
 };
 
 // Initialize Firebase
