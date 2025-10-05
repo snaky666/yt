@@ -1,6 +1,5 @@
 
 // Firebase Configuration
-// استبدل هذه القيم بقيمك من Firebase Console
 const firebaseConfig = {
   apiKey: "AIzaSyBQIPfJlzoTWgjeAEf5kxlylPM0O-ZrGps",
   authDomain: "novaacademy-aeea4.firebaseapp.com",
@@ -73,6 +72,3 @@ async function signOut() {
     console.error('Error signing out:', error);
   }
 }
-git add .
-git commit -m "Add Firebase Authentication"
-git push origin main

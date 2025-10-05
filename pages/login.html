@@ -122,8 +122,10 @@
   <script src="../assets/js/firebase-config.js"></script>
   
   <script>
-    // Email/Password Login
-    document.querySelector('form.demo').addEventListener('submit', async function(e) {
+    // Wait for Firebase to load
+    window.addEventListener('DOMContentLoaded', function() {
+      // Email/Password Login
+      document.querySelector('form.demo').addEventListener('submit', async function(e) {
       e.preventDefault();
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
@@ -168,6 +170,7 @@
     });
     
     form.appendChild(googleBtn);
+    });
   </script>
 </body>
 </html>
