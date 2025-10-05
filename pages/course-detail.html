@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Course Details — NovaAcademy</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <button class="menu-toggle" aria-label="Open menu">☰</button>
+  
+  <aside class="sidebar" aria-hidden="true">
+    <div class="group">
+      <img src="../images/logo.svg" alt="Logo" style="width:54px;height:54px;margin-bottom:10px">
+      <div style="font-weight:700;margin-bottom:6px" data-i18n="siteName">NovaAcademy</div>
+      <div style="font-size:13px;color:var(--gray)" data-i18n="tagline">Professional Learning Platform</div>
+    </div>
+    <div class="group">
+      <a href="../index.html">🏠 <span data-i18n="home">Home</span></a>
+      <a href="courses.html">📚 <span data-i18n="courses">Courses</span></a>
+      <a href="library.html">📖 <span data-i18n="library">Library</span></a>
+      <a href="dashboard.html">📊 <span data-i18n="dashboard">Dashboard</span></a>
+      <a href="profile.html">👤 <span data-i18n="profile">Profile</span></a>
+      <a href="login.html">🔑 <span data-i18n="login">Login</span></a>
+    </div>
+    <div class="lang-selector" style="margin-top:auto;padding:10px 0">
+      <select id="lang-select-sidebar" style="width:100%;padding:8px;border-radius:var(--radius-md);border:1px solid var(--gray-light);background:var(--white);color:var(--dark)">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="zh">中文</option>
+        <option value="ja">日本語</option>
+        <option value="ru">Русский</option>
+        <option value="pt">Português</option>
+        <option value="it">Italiano</option>
+      </select>
+    </div>
+    <div style="margin-top:10px;color:var(--gray);font-size:13px" data-i18n="copyright">© 2025 NovaAcademy</div>
+  </aside>
+
+  <div class="overlay"></div>
+
+  <header>
+    <div class="container header">
+      <div class="brand">
+        <img src="../images/logo.svg" alt="NovaAcademy Logo">
+        <span data-i18n="siteName">NovaAcademy</span>
+      </div>
+      <nav class="nav">
+        <a href="../index.html" data-i18n="home">Home</a>
+        <a href="courses.html" data-i18n="courses">Courses</a>
+        <a href="library.html" data-i18n="library">Library</a>
+        <a href="dashboard.html" data-i18n="dashboard">Dashboard</a>
+        <a href="profile.html" data-i18n="profile">Profile</a>
+      </nav>
+      <div class="nav-actions">
+        <select id="lang-select-header" style="padding:8px 12px;border-radius:var(--radius-md);border:1px solid var(--gray-light);background:var(--white);color:var(--dark);margin-right:10px">
+          <option value="en">EN</option>
+          <option value="ar">AR</option>
+          <option value="es">ES</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+          <option value="zh">ZH</option>
+          <option value="ja">JA</option>
+          <option value="ru">RU</option>
+          <option value="pt">PT</option>
+          <option value="it">IT</option>
+        </select>
+        <a href="login.html" class="btn btn-white" data-i18n="login">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div style="margin:1.25rem 0">
+      <a href="courses.html" style="color:var(--gray);text-decoration:none">← Back to Courses</a>
+    </div>
+
+    <section style="display:grid;grid-template-columns:2fr 1fr;gap:2.5rem;margin-top:1.25rem">
+      <div>
+        <div style="position:relative">
+          <img src="../images/course1.svg" alt="Course" style="width:100%;border-radius:var(--radius-xl);box-shadow:var(--shadow-xl)">
+          <div class="course-badge badge-warning" style="position:absolute;top:1rem;right:1rem">Beginner</div>
+        </div>
+        
+        <h1 style="margin:2rem 0 1rem">HTML & CSS Mastery</h1>
+        <p style="color:var(--gray);font-size:1.125rem;line-height:1.6">Master the fundamentals of web design with this comprehensive course. Learn HTML5, CSS3, Flexbox, Grid, and modern responsive design techniques.</p>
+        
+        <div class="card" style="display:flex;gap:1.5rem;margin:1.5rem 0;padding:1.5rem">
+          <div><span style="color:var(--gray)">Duration:</span> <strong>12 hours</strong></div>
+          <div><span style="color:var(--gray)">Lessons:</span> <strong>24</strong></div>
+          <div><span style="color:var(--gray)">Level:</span> <strong>Beginner</strong></div>
+          <div><span style="color:var(--gray)">Rating:</span> <strong>⭐ 4.8</strong></div>
+        </div>
+
+        <h2 style="margin:2.5rem 0 1.25rem">Course Content</h2>
+        
+        <div class="card module-item" style="margin-bottom:1rem;padding:1.5rem">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <h3 style="margin:0 0 0.5rem">Module 1: HTML Fundamentals</h3>
+              <p style="margin:0;color:var(--gray);font-size:0.875rem">6 lessons • 3 hours</p>
+            </div>
+            <span style="color:var(--primary);font-size:1.5rem">▼</span>
+          </div>
+          <ul class="lesson-list" style="margin-top:1rem;list-style:none;padding:0">
+            <li style="display:flex;justify-content:space-between;padding:0.75rem;border-bottom:1px solid var(--light)">
+              <span>✓ Introduction to HTML</span>
+              <span style="color:var(--gray);font-size:0.813rem">15 min</span>
+            </li>
+            <li style="display:flex;justify-content:space-between;padding:0.75rem;border-bottom:1px solid var(--light)">
+              <span>✓ HTML Document Structure</span>
+              <span style="color:var(--gray);font-size:0.813rem">20 min</span>
+            </li>
+            <li style="display:flex;justify-content:space-between;padding:0.75rem;border-bottom:1px solid var(--light)">
+              <span>Text Elements & Formatting</span>
+              <span style="color:var(--gray);font-size:0.813rem">25 min</span>
+            </li>
+            <li style="display:flex;justify-content:space-between;padding:0.75rem;border-bottom:1px solid var(--light)">
+              <span>Links & Navigation</span>
+              <span style="color:var(--gray);font-size:0.813rem">30 min</span>
+            </li>
+            <li style="display:flex;justify-content:space-between;padding:0.75rem;border-bottom:1px solid var(--light)">
+              <span>Images & Media</span>
+              <span style="color:var(--gray);font-size:0.813rem">25 min</span>
+            </li>
+            <li style="display:flex;justify-content:space-between;padding:0.75rem">
+              <span>Forms & Input Elements</span>
+              <span style="color:var(--gray);font-size:0.813rem">35 min</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card module-item" style="margin-bottom:1rem;padding:1.5rem">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <h3 style="margin:0 0 0.5rem">Module 2: CSS Styling</h3>
+              <p style="margin:0;color:var(--gray);font-size:0.875rem">8 lessons • 4 hours</p>
+            </div>
+            <span style="color:var(--primary);font-size:1.5rem">▶</span>
+          </div>
+        </div>
+
+        <div class="card module-item" style="margin-bottom:1rem;padding:1.5rem">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <h3 style="margin:0 0 0.5rem">Module 3: Responsive Design</h3>
+              <p style="margin:0;color:var(--gray);font-size:0.875rem">10 lessons • 5 hours</p>
+            </div>
+            <span style="color:var(--primary);font-size:1.5rem">▶</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="card" style="padding:1.5rem;position:sticky;top:2rem">
+          <h3 style="margin:0 0 1rem">Enroll Now</h3>
+          <div style="font-size:2.5rem;font-weight:700;color:var(--primary);margin-bottom:0.5rem">$49</div>
+          <p style="color:var(--gray);font-size:0.875rem;margin-bottom:1.5rem">One-time payment • Lifetime access</p>
+          
+          <a href="#" class="btn btn-primary" style="width:100%;text-align:center;display:block;margin-bottom:1rem">Enroll Course</a>
+          <a href="#" class="btn btn-outline" style="width:100%;text-align:center;display:block">Preview Course</a>
+          
+          <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--light)">
+            <h4 style="margin:0 0 1rem;font-size:1rem">This course includes:</h4>
+            <ul style="list-style:none;padding:0;margin:0">
+              <li style="padding:0.5rem 0;display:flex;align-items:center;gap:0.5rem">
+                <span>✓</span> <span>12 hours of video content</span>
+              </li>
+              <li style="padding:0.5rem 0;display:flex;align-items:center;gap:0.5rem">
+                <span>✓</span> <span>24 lessons</span>
+              </li>
+              <li style="padding:0.5rem 0;display:flex;align-items:center;gap:0.5rem">
+                <span>✓</span> <span>Downloadable resources</span>
+              </li>
+              <li style="padding:0.5rem 0;display:flex;align-items:center;gap:0.5rem">
+                <span>✓</span> <span>Certificate of completion</span>
+              </li>
+              <li style="padding:0.5rem 0;display:flex;align-items:center;gap:0.5rem">
+                <span>✓</span> <span>Lifetime access</span>
+              </li>
+              <li style="padding:0.5rem 0;display:flex;align-items:center;gap:0.5rem">
+                <span>✓</span> <span>Mobile & desktop access</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" data-i18n="copyright">
+        © 2025 NovaAcademy — Professional Learning Platform
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>

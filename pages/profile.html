@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Profile — NovaAcademy</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <button class="menu-toggle" aria-label="Open menu">☰</button>
+  
+  <aside class="sidebar" aria-hidden="true">
+    <div class="group">
+      <img src="../images/logo.svg" alt="Logo" style="width:54px;height:54px;margin-bottom:10px">
+      <div style="font-weight:700;margin-bottom:6px" data-i18n="siteName">NovaAcademy</div>
+      <div style="font-size:13px;color:var(--gray)" data-i18n="tagline">Professional Learning Platform</div>
+    </div>
+    <div class="group">
+      <a href="../index.html">🏠 <span data-i18n="home">Home</span></a>
+      <a href="courses.html">📚 <span data-i18n="courses">Courses</span></a>
+      <a href="library.html">📖 <span data-i18n="library">Library</span></a>
+      <a href="dashboard.html">📊 <span data-i18n="dashboard">Dashboard</span></a>
+      <a href="profile.html">👤 <span data-i18n="profile">Profile</span></a>
+      <a href="login.html">🔑 <span data-i18n="login">Login</span></a>
+    </div>
+    <div class="lang-selector" style="margin-top:auto;padding:10px 0">
+      <select id="lang-select-sidebar" style="width:100%;padding:8px;border-radius:var(--radius-md);border:1px solid var(--gray-light);background:var(--white);color:var(--dark)">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="zh">中文</option>
+        <option value="ja">日本語</option>
+        <option value="ru">Русский</option>
+        <option value="pt">Português</option>
+        <option value="it">Italiano</option>
+      </select>
+    </div>
+    <div style="margin-top:10px;color:var(--gray);font-size:13px" data-i18n="copyright">© 2025 NovaAcademy</div>
+  </aside>
+
+  <div class="overlay"></div>
+
+  <header>
+    <div class="container header">
+      <div class="brand">
+        <img src="../images/logo.svg" alt="NovaAcademy Logo">
+        <span data-i18n="siteName">NovaAcademy</span>
+      </div>
+      <nav class="nav">
+        <a href="../index.html" data-i18n="home">Home</a>
+        <a href="courses.html" data-i18n="courses">Courses</a>
+        <a href="library.html" data-i18n="library">Library</a>
+        <a href="dashboard.html" data-i18n="dashboard">Dashboard</a>
+        <a href="profile.html" data-i18n="profile">Profile</a>
+      </nav>
+      <div class="nav-actions">
+        <select id="lang-select-header" style="padding:8px 12px;border-radius:var(--radius-md);border:1px solid var(--gray-light);background:var(--white);color:var(--dark);margin-right:10px">
+          <option value="en">EN</option>
+          <option value="ar">AR</option>
+          <option value="es">ES</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+          <option value="zh">ZH</option>
+          <option value="ja">JA</option>
+          <option value="ru">RU</option>
+          <option value="pt">PT</option>
+          <option value="it">IT</option>
+        </select>
+        <a href="login.html" class="btn btn-white" data-i18n="login">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section style="display:grid;grid-template-columns:1fr 2fr;gap:2.5rem;margin-top:2rem">
+      <div>
+        <div class="card" style="padding:2rem;text-align:center">
+          <div style="width:120px;height:120px;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:50%;margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;font-size:3rem;color:var(--white);font-weight:bold">SA</div>
+          <h2 style="margin:0 0 0.5rem">Sarah Ahmed</h2>
+          <p style="margin:0 0 1rem;color:var(--gray)">sarah.ahmed@email.com</p>
+          <div style="display:inline-block;padding:0.5rem 1rem;background:var(--light);border-radius:var(--radius-full);color:var(--primary);font-size:0.875rem;font-weight:600">Pro Member</div>
+          
+          <div style="margin:1.5rem 0;padding:1.5rem 0;border-top:1px solid var(--light);border-bottom:1px solid var(--light)">
+            <div style="margin-bottom:1rem">
+              <div style="color:var(--gray);font-size:0.813rem">Member Since</div>
+              <div style="font-weight:600;margin-top:0.25rem">January 2024</div>
+            </div>
+            <div>
+              <div style="color:var(--gray);font-size:0.813rem">Learning Streak</div>
+              <div style="color:var(--primary);font-weight:600;margin-top:0.25rem;font-size:1.5rem">🔥 7 days</div>
+            </div>
+          </div>
+
+          <a href="#" class="btn btn-primary" style="width:100%;margin-top:1rem">Edit Profile</a>
+        </div>
+
+        <div class="card" style="padding:1.5rem;margin-top:1.25rem">
+          <h3 style="margin:0 0 1rem">Skills</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:0.5rem">
+            <span style="padding:0.375rem 0.75rem;background:var(--light);border-radius:var(--radius-full);font-size:0.813rem;color:var(--primary)">HTML5</span>
+            <span style="padding:0.375rem 0.75rem;background:var(--light);border-radius:var(--radius-full);font-size:0.813rem;color:var(--primary)">CSS3</span>
+            <span style="padding:0.375rem 0.75rem;background:var(--light);border-radius:var(--radius-full);font-size:0.813rem;color:var(--primary)">JavaScript</span>
+            <span style="padding:0.375rem 0.75rem;background:var(--light);border-radius:var(--radius-full);font-size:0.813rem;color:var(--primary)">Responsive Design</span>
+            <span style="padding:0.375rem 0.75rem;background:var(--light);border-radius:var(--radius-full);font-size:0.813rem;color:var(--primary)">Flexbox</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h1 style="margin:0 0 1.5rem">My Learning Journey</h1>
+        
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3 style="color:var(--primary)">5</h3>
+            <p>Completed Courses</p>
+          </div>
+          <div class="stat-card">
+            <h3 style="color:var(--primary)">3</h3>
+            <p>In Progress</p>
+          </div>
+          <div class="stat-card">
+            <h3 style="color:var(--primary)">48</h3>
+            <p>Total Hours</p>
+          </div>
+          <div class="stat-card">
+            <h3 style="color:var(--primary)">5</h3>
+            <p>Certificates</p>
+          </div>
+        </div>
+
+        <section style="margin-top:3rem">
+          <h2 style="margin:0 0 1.5rem">Recent Achievements</h2>
+          <div style="display:grid;gap:1rem">
+            <div class="card" style="padding:1.5rem;display:flex;align-items:center;gap:1rem">
+              <div style="font-size:3rem">🏆</div>
+              <div>
+                <h4 style="margin:0 0 0.25rem">HTML Master</h4>
+                <p style="margin:0;color:var(--gray);font-size:0.875rem">Completed HTML & CSS Mastery course</p>
+              </div>
+            </div>
+            
+            <div class="card" style="padding:1.5rem;display:flex;align-items:center;gap:1rem">
+              <div style="font-size:3rem">⭐</div>
+              <div>
+                <h4 style="margin:0 0 0.25rem">Perfect Score</h4>
+                <p style="margin:0;color:var(--gray);font-size:0.875rem">100% on JavaScript Basics quiz</p>
+              </div>
+            </div>
+
+            <div class="card" style="padding:1.5rem;display:flex;align-items:center;gap:1rem">
+              <div style="font-size:3rem">🔥</div>
+              <div>
+                <h4 style="margin:0 0 0.25rem">Week Warrior</h4>
+                <p style="margin:0;color:var(--gray);font-size:0.875rem">7-day learning streak</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-top:3rem">
+          <h2 style="margin:0 0 1.5rem">Certificates</h2>
+          <div class="cards">
+            <article class="card">
+              <div style="padding:2rem;background:linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);border-radius:var(--radius-lg) var(--radius-lg) 0 0;text-align:center">
+                <div style="font-size:4rem">📜</div>
+              </div>
+              <div class="card-body">
+                <h3>HTML & CSS Certificate</h3>
+                <p>Completed on March 15, 2024</p>
+                <a class="btn btn-outline mt-2" href="#">Download</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <div style="padding:2rem;background:linear-gradient(135deg, var(--secondary) 0%, var(--primary-dark) 100%);border-radius:var(--radius-lg) var(--radius-lg) 0 0;text-align:center">
+                <div style="font-size:4rem">📜</div>
+              </div>
+              <div class="card-body">
+                <h3>JavaScript Certificate</h3>
+                <p>Completed on April 22, 2024</p>
+                <a class="btn btn-outline mt-2" href="#">Download</a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" data-i18n="copyright">
+        © 2025 NovaAcademy — Professional Learning Platform
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "description": "Master HTML, CSS, JavaScript, and modern web frameworks",
+    "category": "programming",
+    "level": "Beginner",
+    "duration": "40 hours",
+    "lessons": 120,
+    "rating": 4.9,
+    "instructor": "Sarah Johnson",
+    "image": "course-web-dev.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Python for Data Science",
+    "description": "Learn Python programming and data analysis libraries",
+    "category": "programming",
+    "level": "Intermediate",
+    "duration": "35 hours",
+    "lessons": 95,
+    "rating": 4.8,
+    "instructor": "Dr. Michael Chen",
+    "image": "course-python.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Machine Learning Fundamentals",
+    "description": "Introduction to ML algorithms and practical applications",
+    "category": "programming",
+    "level": "Advanced",
+    "duration": "50 hours",
+    "lessons": 140,
+    "rating": 4.9,
+    "instructor": "Prof. Emily Rodriguez",
+    "image": "course-ml.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Data Science Mastery",
+    "description": "Complete data science workflow from analysis to visualization",
+    "category": "programming",
+    "level": "Intermediate",
+    "duration": "45 hours",
+    "lessons": 110,
+    "rating": 4.7,
+    "instructor": "Dr. James Wilson",
+    "image": "course-datascience.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Digital Marketing Strategy",
+    "description": "Modern marketing techniques and social media strategies",
+    "category": "business",
+    "level": "Beginner",
+    "duration": "25 hours",
+    "lessons": 70,
+    "rating": 4.6,
+    "instructor": "Lisa Anderson",
+    "image": "course-marketing.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Financial Planning & Analysis",
+    "description": "Personal finance, investing, and wealth management",
+    "category": "business",
+    "level": "Intermediate",
+    "duration": "30 hours",
+    "lessons": 85,
+    "rating": 4.8,
+    "instructor": "Robert Martinez",
+    "image": "course-finance.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Entrepreneurship & Startups",
+    "description": "Build and scale your business from idea to success",
+    "category": "business",
+    "level": "Advanced",
+    "duration": "35 hours",
+    "lessons": 90,
+    "rating": 4.9,
+    "instructor": "Amanda Foster",
+    "image": "course-business.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Graphic Design Essentials",
+    "description": "Master design principles, typography, and visual communication",
+    "category": "creative",
+    "level": "Beginner",
+    "duration": "28 hours",
+    "lessons": 75,
+    "rating": 4.7,
+    "instructor": "David Kim",
+    "image": "course-design.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Professional Photography",
+    "description": "Camera techniques, lighting, and photo editing",
+    "category": "creative",
+    "level": "Intermediate",
+    "duration": "32 hours",
+    "lessons": 80,
+    "rating": 4.8,
+    "instructor": "Sophie Laurent",
+    "image": "course-photography.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Creative Writing Workshop",
+    "description": "Storytelling, character development, and writing techniques",
+    "category": "creative",
+    "level": "Beginner",
+    "duration": "24 hours",
+    "lessons": 65,
+    "rating": 4.6,
+    "instructor": "Thomas Wright",
+    "image": "course-writing.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Music Theory & Composition",
+    "description": "Learn music fundamentals and create your own compositions",
+    "category": "creative",
+    "level": "Intermediate",
+    "duration": "30 hours",
+    "lessons": 78,
+    "rating": 4.7,
+    "instructor": "Maria Gonzalez",
+    "image": "course-music.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Yoga & Mindfulness",
+    "description": "Physical practice, meditation, and spiritual wellness",
+    "category": "personal",
+    "level": "Beginner",
+    "duration": "20 hours",
+    "lessons": 55,
+    "rating": 4.9,
+    "instructor": "Priya Sharma",
+    "image": "course-yoga.jpg"
+  }
+]

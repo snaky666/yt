@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dashboard — NovaAcademy</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <button class="menu-toggle" aria-label="Open menu">☰</button>
+  
+  <aside class="sidebar" aria-hidden="true">
+    <div class="group">
+      <img src="../images/logo.svg" alt="Logo" style="width:54px;height:54px;margin-bottom:10px">
+      <div style="font-weight:700;margin-bottom:6px" data-i18n="siteName">NovaAcademy</div>
+      <div style="font-size:13px;color:var(--gray)" data-i18n="tagline">Professional Learning Platform</div>
+    </div>
+    <div class="group">
+      <a href="../index.html">🏠 <span data-i18n="home">Home</span></a>
+      <a href="courses.html">📚 <span data-i18n="courses">Courses</span></a>
+      <a href="library.html">📖 <span data-i18n="library">Library</span></a>
+      <a href="dashboard.html">📊 <span data-i18n="dashboard">Dashboard</span></a>
+      <a href="profile.html">👤 <span data-i18n="profile">Profile</span></a>
+      <a href="login.html">🔑 <span data-i18n="login">Login</span></a>
+    </div>
+    <div class="lang-selector" style="margin-top:auto;padding:10px 0">
+      <select id="lang-select-sidebar" style="width:100%;padding:8px;border-radius:var(--radius-md);border:1px solid var(--gray-light);background:var(--white);color:var(--dark)">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="zh">中文</option>
+        <option value="ja">日本語</option>
+        <option value="ru">Русский</option>
+        <option value="pt">Português</option>
+        <option value="it">Italiano</option>
+      </select>
+    </div>
+    <div style="margin-top:10px;color:var(--gray);font-size:13px" data-i18n="copyright">© 2025 NovaAcademy</div>
+  </aside>
+
+  <div class="overlay"></div>
+
+  <header>
+    <div class="container header">
+      <div class="brand">
+        <img src="../images/logo.svg" alt="NovaAcademy Logo">
+        <span data-i18n="siteName">NovaAcademy</span>
+      </div>
+      <nav class="nav">
+        <a href="../index.html" data-i18n="home">Home</a>
+        <a href="courses.html" data-i18n="courses">Courses</a>
+        <a href="library.html" data-i18n="library">Library</a>
+        <a href="dashboard.html" data-i18n="dashboard">Dashboard</a>
+        <a href="profile.html" data-i18n="profile">Profile</a>
+      </nav>
+      <div class="nav-actions">
+        <select id="lang-select-header" style="padding:8px 12px;border-radius:var(--radius-md);border:1px solid var(--gray-light);background:var(--white);color:var(--dark);margin-right:10px">
+          <option value="en">EN</option>
+          <option value="ar">AR</option>
+          <option value="es">ES</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+          <option value="zh">ZH</option>
+          <option value="ja">JA</option>
+          <option value="ru">RU</option>
+          <option value="pt">PT</option>
+          <option value="it">IT</option>
+        </select>
+        <a href="login.html" class="btn btn-white" data-i18n="login">Login</a>
+        <a href="profile.html" class="btn btn-primary" data-i18n="profile">Profile</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 style="margin:2rem 0 1rem" data-i18n="dashboard">Learning Dashboard</h1>
+    <p style="color:var(--gray);font-size:1rem">Track your progress and continue learning</p>
+
+    <div class="stats-grid" style="margin-top:2rem">
+      <div class="stat-card">
+        <h3 style="color:var(--primary)">3</h3>
+        <p>Active Courses</p>
+      </div>
+      <div class="stat-card">
+        <h3 style="color:var(--primary)">24</h3>
+        <p>Completed Lessons</p>
+      </div>
+      <div class="stat-card">
+        <h3 style="color:var(--primary)">12.5</h3>
+        <p>Learning Hours</p>
+      </div>
+      <div class="stat-card">
+        <h3 style="color:var(--primary)">5</h3>
+        <p>Certificates</p>
+      </div>
+    </div>
+
+    <section style="margin-top:3rem">
+      <h2 style="margin:0 0 1.5rem">Continue Learning</h2>
+      <div style="display:grid;gap:1.5rem">
+        <div class="card" style="display:grid;grid-template-columns:120px 1fr auto;gap:1.5rem;align-items:center">
+          <img src="../images/course1.svg" alt="Course" style="width:100%;border-radius:var(--radius-lg)">
+          <div>
+            <h3 style="margin:0 0 0.5rem">HTML & CSS Mastery</h3>
+            <p style="margin:0 0 0.75rem;color:var(--gray);font-size:0.875rem">Module 2: CSS Styling</p>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width:33%"></div>
+            </div>
+            <p style="margin:0.5rem 0 0;color:var(--gray);font-size:0.813rem">33% complete • 16 lessons left</p>
+          </div>
+          <a href="course-detail.html?id=1" class="btn btn-primary">Continue</a>
+        </div>
+
+        <div class="card" style="display:grid;grid-template-columns:120px 1fr auto;gap:1.5rem;align-items:center">
+          <img src="../images/course2.svg" alt="Course" style="width:100%;border-radius:var(--radius-lg)">
+          <div>
+            <h3 style="margin:0 0 0.5rem">JavaScript Pro</h3>
+            <p style="margin:0 0 0.75rem;color:var(--gray);font-size:0.875rem">Module 1: JS Basics</p>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width:18%"></div>
+            </div>
+            <p style="margin:0.5rem 0 0;color:var(--gray);font-size:0.813rem">18% complete • 26 lessons left</p>
+          </div>
+          <a href="course-detail.html?id=2" class="btn btn-primary">Continue</a>
+        </div>
+
+        <div class="card" style="display:grid;grid-template-columns:120px 1fr auto;gap:1.5rem;align-items:center">
+          <img src="../images/course3.svg" alt="Course" style="width:100%;border-radius:var(--radius-lg)">
+          <div>
+            <h3 style="margin:0 0 0.5rem">Responsive Design</h3>
+            <p style="margin:0 0 0.75rem;color:var(--gray);font-size:0.875rem">Module 3: Flexbox & Grid</p>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width:67%"></div>
+            </div>
+            <p style="margin:0.5rem 0 0;color:var(--gray);font-size:0.813rem">67% complete • 6 lessons left</p>
+          </div>
+          <a href="course-detail.html?id=3" class="btn btn-primary">Continue</a>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:3rem">
+      <h2 style="margin:0 0 1.5rem">Recommended Courses</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="../images/course1.svg" alt="React Course">
+          <div class="course-badge badge-warning">Advanced</div>
+          <div class="card-body">
+            <h3>React Development</h3>
+            <p>Build modern web applications with React and hooks.</p>
+            <div class="course-meta">
+              <span>⏱ 20 hours</span>
+              <span>📖 40 lessons</span>
+              <span>⭐ 4.9</span>
+            </div>
+            <a class="btn btn-primary mt-2" href="course-detail.html?id=4">Start Learning</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="../images/course2.svg" alt="Node.js Course">
+          <div class="course-badge badge-warning">Intermediate</div>
+          <div class="card-body">
+            <h3>Node.js Backend</h3>
+            <p>Create scalable backend applications with Node.js.</p>
+            <div class="course-meta">
+              <span>⏱ 16 hours</span>
+              <span>📖 28 lessons</span>
+              <span>⭐ 4.8</span>
+            </div>
+            <a class="btn btn-primary mt-2" href="course-detail.html?id=5">Start Learning</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" data-i18n="copyright">
+        © 2025 NovaAcademy — Professional Learning Platform
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>

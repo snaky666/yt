@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="64" viewBox="0 0 240 64">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#06b6d4"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+  </defs>
+  <g transform="translate(6,6)">
+    <circle cx="24" cy="24" r="20" fill="url(#g)"/>
+    <path d="M16 34c6-10 16-10 22 0-6 10-16 10-22 0z" fill="#fff" opacity="0.95"/>
+    <circle cx="24" cy="18" r="5" fill="#fff" opacity="0.95"/>
+    <text x="56" y="32" font-family="Segoe UI, Roboto, Arial" font-size="18" fill="#EDE9FE">NovaAcademy</text>
+  </g>
+</svg>

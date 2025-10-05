@@ -1,0 +1,83 @@
+
+[
+  {
+    "id": 1,
+    "title": "Introduction to Web Development",
+    "description": "Complete guide to HTML, CSS, and JavaScript basics",
+    "type": "articles",
+    "category": "Programming",
+    "duration": "15 min read",
+    "image": "resource-webdev-article.jpg",
+    "url": "#"
+  },
+  {
+    "id": 2,
+    "title": "Advanced Marketing Strategies",
+    "description": "Learn modern digital marketing techniques",
+    "type": "articles",
+    "category": "Business",
+    "duration": "20 min read",
+    "image": "resource-marketing-article.jpg",
+    "url": "#"
+  },
+  {
+    "id": 3,
+    "title": "Machine Learning Tutorial Series",
+    "description": "Step-by-step video tutorials on AI and ML",
+    "type": "videos",
+    "category": "Programming",
+    "duration": "2 hours",
+    "image": "resource-ai-video.jpg",
+    "url": "#"
+  },
+  {
+    "id": 4,
+    "title": "Design Principles Masterclass",
+    "description": "Professional design techniques and best practices",
+    "type": "videos",
+    "category": "Creative",
+    "duration": "1.5 hours",
+    "image": "resource-design-video.jpg",
+    "url": "#"
+  },
+  {
+    "id": 5,
+    "title": "Photography Lighting Guide",
+    "description": "Master natural and artificial lighting techniques",
+    "type": "guides",
+    "category": "Creative",
+    "duration": "30 min",
+    "image": "resource-photo-guide.jpg",
+    "url": "#"
+  },
+  {
+    "id": 6,
+    "title": "Financial Planning Handbook",
+    "description": "Complete guide to personal finance management",
+    "type": "guides",
+    "category": "Business",
+    "duration": "45 min",
+    "image": "resource-finance-guide.jpg",
+    "url": "#"
+  },
+  {
+    "id": 7,
+    "title": "Startup Launch Checklist",
+    "description": "Everything you need to start your business",
+    "type": "guides",
+    "category": "Business",
+    "duration": "25 min",
+    "image": "resource-business-guide.jpg",
+    "url": "#"
+  },
+  {
+    "id": 8,
+    "title": "Meditation & Mindfulness",
+    "description": "Guided meditation sessions for beginners",
+    "type": "videos",
+    "category": "Personal",
+    "duration": "30 min",
+    "image": "resource-meditation-video.jpg",
+    "url": "#"
+  }
+]

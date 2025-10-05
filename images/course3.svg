@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs><linearGradient id="c3" x1="0" x2="1"><stop offset="0" stop-color="#06b6d4"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs>
+  <rect width="800" height="450" fill="#0d1117"/>
+  <rect x="40" y="40" width="720" height="370" rx="16" fill="url(#c3)" opacity="0.15"/>
+  <text x="60" y="120" font-family="Segoe UI, Roboto, Arial" font-size="36" fill="#e6eef8">Course 3</text>
+  <text x="60" y="170" font-family="Segoe UI, Roboto, Arial" font-size="18" fill="#c8d6e5" opacity="0.85">Interactive lessons · 4 chapters</text>
+</svg>

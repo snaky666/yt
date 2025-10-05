@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Library — NovaAcademy</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <button class="menu-toggle" aria-label="Open menu">☰</button>
+  
+  <aside class="sidebar" aria-hidden="true">
+    <div class="group">
+      <img src="../images/logo.svg" alt="Logo" style="width:54px;height:54px;margin-bottom:10px">
+      <div style="font-weight:700;margin-bottom:6px" data-i18n="siteName">NovaAcademy</div>
+      <div style="font-size:13px;color:var(--gray)" data-i18n="tagline">Professional Learning Platform</div>
+    </div>
+    <div class="group">
+      <a href="../index.html">🏠 <span data-i18n="home">Home</span></a>
+      <a href="courses.html">📚 <span data-i18n="courses">Courses</span></a>
+      <a href="library.html">📖 <span data-i18n="library">Library</span></a>
+      <a href="dashboard.html">📊 <span data-i18n="dashboard">Dashboard</span></a>
+      <a href="profile.html">👤 <span data-i18n="profile">Profile</span></a>
+      <a href="login.html">🔑 <span data-i18n="login">Login</span></a>
+    </div>
+    <div class="lang-selector" style="margin-top:auto;padding:10px 0">
+      <select id="lang-select-sidebar" style="width:100%;padding:8px;border-radius:var(--radius-md);border:1px solid var(--gray-light);background:var(--white);color:var(--dark)">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="zh">中文</option>
+        <option value="ja">日本語</option>
+        <option value="ru">Русский</option>
+        <option value="pt">Português</option>
+        <option value="it">Italiano</option>
+      </select>
+    </div>
+    <div style="margin-top:10px;color:var(--gray);font-size:13px" data-i18n="copyright">© 2025 NovaAcademy</div>
+  </aside>
+
+  <div class="overlay"></div>
+
+  <header>
+    <div class="container header">
+      <div class="brand">
+        <img src="../images/logo.svg" alt="NovaAcademy Logo">
+        <span data-i18n="siteName">NovaAcademy</span>
+      </div>
+      <nav class="nav">
+        <a href="../index.html" data-i18n="home">Home</a>
+        <a href="courses.html" data-i18n="courses">Courses</a>
+        <a href="library.html" data-i18n="library">Library</a>
+        <a href="dashboard.html" data-i18n="dashboard">Dashboard</a>
+        <a href="profile.html" data-i18n="profile">Profile</a>
+      </nav>
+      <div class="nav-actions">
+        <select id="lang-select-header" style="padding:8px 12px;border-radius:var(--radius-md);border:1px solid var(--gray-light);background:var(--white);color:var(--dark);margin-right:10px">
+          <option value="en">EN</option>
+          <option value="ar">AR</option>
+          <option value="es">ES</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+          <option value="zh">ZH</option>
+          <option value="ja">JA</option>
+          <option value="ru">RU</option>
+          <option value="pt">PT</option>
+          <option value="it">IT</option>
+        </select>
+        <a href="login.html" class="btn btn-white" data-i18n="login">Login</a>
+        <a href="register.html" class="btn btn-primary" data-i18n="signUp">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);padding:4rem 0">
+    <div class="container">
+      <div style="text-align:center;color:var(--white)">
+        <h1 data-i18n="libraryTitle" style="color:var(--white)">Knowledge Library</h1>
+        <p data-i18n="librarySubtitle" style="color:var(--beige);font-size:1.2rem">Access our comprehensive collection of learning resources</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="mt-4">
+      <div style="margin-bottom:2rem">
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+          <button class="btn btn-primary category-filter" data-category="all">All Resources</button>
+          <button class="btn btn-outline category-filter" data-category="books">Books</button>
+          <button class="btn btn-outline category-filter" data-category="articles">Articles</button>
+          <button class="btn btn-outline category-filter" data-category="videos">Videos</button>
+          <button class="btn btn-outline category-filter" data-category="guides">Guides</button>
+        </div>
+      </div>
+
+      <div class="cards" id="library-resources">
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h4 data-i18n="siteName">NovaAcademy</h4>
+          <p style="color:var(--gray-light)" data-i18n="tagline">Professional learning platform for motivated learners</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="courses.html" data-i18n="courses">Courses</a>
+          <a href="library.html" data-i18n="library">Library</a>
+          <a href="dashboard.html" data-i18n="dashboard">Dashboard</a>
+          <a href="profile.html" data-i18n="profile">Profile</a>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <a href="#">Help Center</a>
+          <a href="#">Contact Us</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom" data-i18n="copyright">
+        © 2025 NovaAcademy — Professional Learning Platform
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/api.js"></script>
+  <script>
+    let allResources = [];
+    let allBooks = [];
+    let currentFilter = 'all';
+
+    async function loadLibraryContent() {
+      try {
+        const [resources, books] = await Promise.all([
+          api.getResources(),
+          api.getBooks()
+        ]);
+        
+        allResources = resources;
+        allBooks = books;
+        
+        displayLibraryContent(currentFilter);
+      } catch (error) {
+        console.error('Error loading library content:', error);
+      }
+    }
+
+    function displayLibraryContent(filter) {
+      const container = document.getElementById('library-resources');
+      container.innerHTML = '';
+      
+      let itemsToDisplay = [];
+      
+      if (filter === 'all' || filter === 'books') {
+        const bookCards = allBooks.map(book => createBookCard(book));
+        itemsToDisplay = itemsToDisplay.concat(bookCards);
+      }
+      
+      if (filter === 'all') {
+        const resourceCards = allResources.map(resource => createResourceCard(resource));
+        itemsToDisplay = itemsToDisplay.concat(resourceCards);
+      } else if (filter !== 'books') {
+        const filteredResources = allResources.filter(r => r.type.toLowerCase() === filter);
+        const resourceCards = filteredResources.map(resource => createResourceCard(resource));
+        itemsToDisplay = itemsToDisplay.concat(resourceCards);
+      }
+      
+      itemsToDisplay.forEach(card => container.appendChild(card));
+    }
+
+    function createResourceCard(resource) {
+      const card = document.createElement('article');
+      card.className = 'card';
+      card.setAttribute('data-category', resource.type.toLowerCase());
+      
+      const typeIcons = {
+        'articles': '📰',
+        'videos': '🎥',
+        'guides': '📋'
+      };
+      
+      const icon = typeIcons[resource.type.toLowerCase()] || '📄';
+      const capitalizedType = resource.type.charAt(0).toUpperCase() + resource.type.slice(1);
+      
+      card.innerHTML = `
+        <div style="padding:2rem;background:linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);border-radius:var(--radius-lg) var(--radius-lg) 0 0;min-height:200px;display:flex;align-items:center;justify-content:center;overflow:hidden">
+          ${resource.image ? `<img src="../images/${resource.image}" alt="${resource.title}" style="width:100%;height:200px;object-fit:cover;border-radius:var(--radius-md)">` : `<div style="font-size:3rem;text-align:center">${icon}</div>`}
+        </div>
+        <div class="card-body">
+          <div class="course-badge badge-warning">${capitalizedType}</div>
+          <h3>${resource.title}</h3>
+          <p>${resource.description}</p>
+          <div class="course-meta">
+            <span>📂 ${resource.category}</span>
+            ${resource.duration ? `<span>⏱ ${resource.duration}</span>` : ''}
+          </div>
+          <a class="btn btn-primary mt-2" href="${resource.url || '#'}">View ${capitalizedType}</a>
+        </div>
+      `;
+      
+      return card;
+    }
+
+    function createBookCard(book) {
+      const card = document.createElement('article');
+      card.className = 'card';
+      card.setAttribute('data-category', 'books');
+      
+      card.innerHTML = `
+        <div style="padding:2rem;background:linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);border-radius:var(--radius-lg) var(--radius-lg) 0 0;min-height:200px;display:flex;align-items:center;justify-content:center;overflow:hidden">
+          ${book.image ? `<img src="../images/${book.image}" alt="${book.title}" style="width:100%;height:200px;object-fit:cover;border-radius:var(--radius-md)">` : `<div style="font-size:3rem;text-align:center">📚</div>`}
+        </div>
+        <div class="card-body">
+          <div class="course-badge badge-warning">Book</div>
+          <h3>${book.title}</h3>
+          <p style="font-style:italic;color:var(--gray);margin-bottom:0.5rem">by ${book.author}</p>
+          <p>${book.description}</p>
+          <div class="course-meta">
+            <span>📄 ${book.pages} pages</span>
+            <span>⭐ ${book.rating}</span>
+          </div>
+          <a class="btn btn-primary mt-2" href="#">Read Now</a>
+        </div>
+      `;
+      
+      return card;
+    }
+
+    document.querySelectorAll('.category-filter').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.category-filter').forEach(b => {
+          b.classList.remove('btn-primary');
+          b.classList.add('btn-outline');
+        });
+        this.classList.remove('btn-outline');
+        this.classList.add('btn-primary');
+        
+        currentFilter = this.getAttribute('data-category');
+        displayLibraryContent(currentFilter);
+      });
+    });
+
+    loadLibraryContent();
+  </script>
+</body>
+</html>
